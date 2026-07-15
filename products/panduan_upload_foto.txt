@@ -1,0 +1,556 @@
+PANDUAN UPLOAD FOTO PRODUK — LUNELLY.ID
+==============================================
+
+ATURAN SINGKAT:
+1. Foto bentuk POTRET (rasio 3:4), format .jpg, usahakan di bawah 300 KB.
+2. Rename file PERSIS seperti daftar di bawah. Semua huruf kecil, TANPA spasi, TANPA tanda hubung.
+3. Upload ke folder 'products' di link yang sudah di-bookmark. Kalau salah nama, hapus lalu upload ulang dengan nama benar.
+4. Tidak perlu upload semua sekaligus. Foto yang belum ada otomatis tampil sebagai kotak warna di website.
+5. WARNA PERTAMA di tiap daftar = foto utama di kartu produk. Dahulukan itu.
+6. Setelah upload, cek di lunelly.id (refresh / mode incognito). Foto baru kadang muncul 1-2 menit setelah upload.
+
+=== SKU A01 — Stevy Bow Top Y2K ===
+Hitam  ->  stevyhitam.jpg  <-- FOTO UTAMA
+Dusty Pink  ->  stevypink.jpg
+Dark Choco  ->  stevychoco.jpg
+Soft Brown  ->  stevybrown.jpg
+Sky Blue  ->  stevysky.jpg
+Tosca  ->  stevytosca.jpg
+Ash Grey  ->  stevygrey.jpg
+Misty  ->  stevymisty.jpg
+Maroon  ->  stevymaroon.jpg
+
+=== SKU A09 — Stella Bow Top Y2K ===
+White Polka  ->  stellawhitepolka.jpg  <-- FOTO UTAMA
+Black Polka  ->  stellablackpolka.jpg
+Dark Choco  ->  stellachoco.jpg
+Misty  ->  stellamisty.jpg
+Maroon  ->  stellamaroon.jpg
+Sky Blue  ->  stellasky.jpg
+Ash Grey  ->  stellagrey.jpg
+Dusty Pink  ->  stellapink.jpg
+Baby Pink Polka  ->  stellapinkpolka.jpg
+Soft Brown  ->  stellabrown.jpg
+Blue Soft Polka  ->  stellabluepolka.jpg
+Hitam  ->  stellahitam.jpg
+
+=== SKU A25 — Chani Twist Off-Shoulder ===
+Putih  ->  chaniputih.jpg  <-- FOTO UTAMA
+Dusty Tosca  ->  chanidustytosca.jpg
+Misty  ->  chanimisty.jpg
+Misty Blue  ->  chanimistyblue.jpg
+Dusty Pink  ->  chanipink.jpg
+Taro  ->  chanitaro.jpg
+Sage Olive  ->  chanisage.jpg
+Maroon  ->  chanimaroon.jpg
+Moss Green  ->  chanimoss.jpg
+Ash Grey  ->  chanigrey.jpg
+Baby Blue  ->  chanibabyblue.jpg
+Soft Brown  ->  chanibrown.jpg
+Dark Choco  ->  chanichoco.jpg
+Hitam  ->  chanihitam.jpg
+
+=== SKU A22 — Daisy Ribbon Strap Top ===
+Misty Blue  ->  daisymistyblue.jpg  <-- FOTO UTAMA
+Soft Brown  ->  daisybrown.jpg
+White Polka  ->  daisywhitepolka.jpg
+Ash Grey  ->  daisygrey.jpg
+Taro  ->  daisytaro.jpg
+Black Polka  ->  daisyblackpolka.jpg
+Pink Soft Polka  ->  daisypinkpolka.jpg
+Dark Choco  ->  daisychoco.jpg
+Putih  ->  daisyputih.jpg
+Dusty Pink  ->  daisypink.jpg
+Abu Misty  ->  daisyabumisty.jpg
+Maroon  ->  daisymaroon.jpg
+Navy  ->  daisynavy.jpg
+Baby Blue  ->  daisybabyblue.jpg
+Hitam  ->  daisyhitam.jpg
+Moss Green  ->  daisymoss.jpg
+Blue Soft Polka  ->  daisybluepolka.jpg
+
+=== SKU A43 — Sienna One Shoulder Knit ===
+Dusty Pink  ->  siennapink.jpg  <-- FOTO UTAMA
+Maroon  ->  siennamaroon.jpg
+Soft Brown  ->  siennabrown.jpg
+Baby Blue  ->  siennababyblue.jpg
+Navy  ->  siennanavy.jpg
+Hitam  ->  siennahitam.jpg
+Abu Abu  ->  siennaabu.jpg
+Dark Choco  ->  siennachoco.jpg
+Putih  ->  siennaputih.jpg
+
+=== SKU A39 — Scarlet Blouse Off Shoulder ===
+Hitam  ->  scarlethitam.jpg  <-- FOTO UTAMA
+Putih  ->  scarletputih.jpg
+Dark Choco  ->  scarletchoco.jpg
+Navy  ->  scarletnavy.jpg
+Dusty Pink  ->  scarletpink.jpg
+Maroon  ->  scarletmaroon.jpg
+
+=== SKU A21 — Cacha Sweetie Ribbon Top ===
+Maroon  ->  cachamaroon.jpg  <-- FOTO UTAMA
+Dark Choco  ->  cachachoco.jpg
+Misty Blue  ->  cachamistyblue.jpg
+Putih  ->  cachaputih.jpg
+Dusty Pink  ->  cachapink.jpg
+Moss Green  ->  cachamoss.jpg
+Taro  ->  cachataro.jpg
+Hitam  ->  cachahitam.jpg
+Soft Brown  ->  cachabrown.jpg
+Misty  ->  cachamisty.jpg
+
+=== SKU A26 — Off Shoulder Fold Top ===
+Misty Blue  ->  foldmistyblue.jpg  <-- FOTO UTAMA
+Dark Choco  ->  foldchoco.jpg
+Hitam  ->  foldhitam.jpg
+Maroon  ->  foldmaroon.jpg
+Dusty Pink  ->  foldpink.jpg
+Soft Brown  ->  foldbrown.jpg
+Moss Green  ->  foldmoss.jpg
+Misty  ->  foldmisty.jpg
+Baby Blue  ->  foldbabyblue.jpg
+Putih  ->  foldputih.jpg
+Taro  ->  foldtaro.jpg
+
+=== SKU A13 — Divia Ribbed Cut Out Top ===
+Moss Green  ->  diviamoss.jpg  <-- FOTO UTAMA
+Hitam  ->  diviahitam.jpg
+Misty  ->  diviamisty.jpg
+Taro  ->  diviataro.jpg
+Maroon  ->  diviamaroon.jpg
+Misty Blue  ->  diviamistyblue.jpg
+Soft Brown  ->  diviabrown.jpg
+Dark Choco  ->  diviachoco.jpg
+Putih  ->  diviaputih.jpg
+Dusty Pink  ->  diviapink.jpg
+
+=== SKU A15 — Cantika Off-Shoulder Top ===
+Misty Blue  ->  cantikamistyblue.jpg  <-- FOTO UTAMA
+Moss Green  ->  cantikamoss.jpg
+Soft Brown  ->  cantikabrown.jpg
+Baby Blue  ->  cantikababyblue.jpg
+Taro  ->  cantikataro.jpg
+Dusty Pink  ->  cantikapink.jpg
+Misty  ->  cantikamisty.jpg
+
+=== SKU A44 — Jasmine Ribbon Knit Top ===
+Baby Pink Polka  ->  jasminepinkpolka.jpg  <-- FOTO UTAMA
+Hitam  ->  jasminehitam.jpg
+White Polka  ->  jasminewhitepolka.jpg
+Blue Soft Polka  ->  jasminebluepolka.jpg
+Maroon  ->  jasminemaroon.jpg
+Dusty Pink  ->  jasminepink.jpg
+Ash Grey  ->  jasminegrey.jpg
+Navy  ->  jasminenavy.jpg
+Baby Blue  ->  jasminebabyblue.jpg
+Black Polka  ->  jasmineblackpolka.jpg
+
+=== SKU A41 — Elora Gold Button Top ===
+Navy  ->  eloranavy.jpg  <-- FOTO UTAMA
+Hitam  ->  elorahitam.jpg
+Dark Choco  ->  elorachoco.jpg
+Maroon  ->  eloramaroon.jpg
+Putih  ->  eloraputih.jpg
+Dusty Pink  ->  elorapink.jpg
+
+=== SKU A31 — Clovia Off Shoulder Knit ===
+Soft Brown  ->  cloviabrown.jpg  <-- FOTO UTAMA
+Dark Choco  ->  cloviachoco.jpg
+Maroon  ->  cloviamaroon.jpg
+Hitam  ->  cloviahitam.jpg
+Moss Green  ->  cloviamoss.jpg
+Putih  ->  cloviaputih.jpg
+Misty Blue  ->  cloviamistyblue.jpg
+Taro  ->  cloviataro.jpg
+Dusty Pink  ->  cloviapink.jpg
+Misty  ->  cloviamisty.jpg
+
+=== SKU A03 — Sally Bow Top Lacy ===
+Sky Blue  ->  sallysky.jpg  <-- FOTO UTAMA
+Dusty Pink  ->  sallypink.jpg
+Soft Brown  ->  sallybrown.jpg
+Misty  ->  sallymisty.jpg
+
+=== SKU 6065 — Kanaya Crop Top V-Neck ===
+Fuschia  ->  kanayafuschia.jpg  <-- FOTO UTAMA
+Navy  ->  kanayanavy.jpg
+Putih  ->  kanayaputih.jpg
+Maroon  ->  kanayamaroon.jpg
+Kubus  ->  kanayakubus.jpg
+Army  ->  kanayaarmy.jpg
+Khaki  ->  kanayakhaki.jpg
+Abu Tua  ->  kanayaabutua.jpg
+Denim  ->  kanayadenim.jpg
+Cokelat  ->  kanayacokelat.jpg
+Merah  ->  kanayamerah.jpg
+Taro  ->  kanayataro.jpg
+Salem  ->  kanayasalem.jpg
+Lime  ->  kanayalime.jpg
+Hitam  ->  kanayahitam.jpg
+Plum  ->  kanayaplum.jpg
+
+=== SKU A29 — Claire Off Shoulder Tee ===
+Misty  ->  clairemisty.jpg  <-- FOTO UTAMA
+Taro  ->  clairetaro.jpg
+Misty Blue  ->  clairemistyblue.jpg
+Maroon  ->  clairemaroon.jpg
+Hitam  ->  clairehitam.jpg
+Putih  ->  claireputih.jpg
+Dark Choco  ->  clairechoco.jpg
+Moss Green  ->  clairemoss.jpg
+Soft Brown  ->  clairebrown.jpg
+Dusty Pink  ->  clairepink.jpg
+
+=== SKU A12 — Carol Long Sleeve Two Piece ===
+Soft Brown  ->  carolbrown.jpg  <-- FOTO UTAMA
+Dusty Pink  ->  carolpink.jpg
+Misty Blue  ->  carolmistyblue.jpg
+Taro  ->  caroltaro.jpg
+Dark Choco  ->  carolchoco.jpg
+Misty  ->  carolmisty.jpg
+Moss Green  ->  carolmoss.jpg
+
+=== SKU A06 — Sasha Bow Top Y2K ===
+Dusty Pink  ->  sashapink.jpg  <-- FOTO UTAMA
+Soft Brown  ->  sashabrown.jpg
+Misty  ->  sashamisty.jpg
+Sky Blue  ->  sashasky.jpg
+
+=== SKU A02 — Siera Bow Top Y2K ===
+Soft Brown  ->  sierabrown.jpg  <-- FOTO UTAMA
+Misty  ->  sieramisty.jpg
+Dusty Pink  ->  sierapink.jpg
+Sky Blue  ->  sierasky.jpg
+
+=== SKU 6032 — Lucia Crop Top ===
+Fuschia  ->  luciafuschia.jpg  <-- FOTO UTAMA
+Abu  ->  luciaabu.jpg
+Cokelat  ->  luciacokelat.jpg
+Denim  ->  luciadenim.jpg
+Khaki  ->  luciakhaki.jpg
+Army  ->  luciaarmy.jpg
+Hitam  ->  luciahitam.jpg
+Navy  ->  lucianavy.jpg
+Plum  ->  luciaplum.jpg
+Lime  ->  lucialime.jpg
+Merah  ->  luciamerah.jpg
+Lemon  ->  lucialemon.jpg
+Salem  ->  luciasalem.jpg
+Maroon  ->  luciamaroon.jpg
+
+=== SKU 6066 — Alaya One Shoulder Top ===
+Salem  ->  alayasalem.jpg  <-- FOTO UTAMA
+Cokelat  ->  alayacokelat.jpg
+Plum  ->  alayaplum.jpg
+Hitam  ->  alayahitam.jpg
+Maroon  ->  alayamaroon.jpg
+Abu-abu  ->  alayaabu.jpg
+
+=== SKU 6042 — Qayla Crop Top Serut ===
+Salem  ->  qaylasalem.jpg  <-- FOTO UTAMA
+Kubus  ->  qaylakubus.jpg
+Dusty Pink  ->  qaylapink.jpg
+Denim  ->  qayladenim.jpg
+Navy  ->  qaylanavy.jpg
+Hitam  ->  qaylahitam.jpg
+Lemon  ->  qaylalemon.jpg
+Putih  ->  qaylaputih.jpg
+Merah  ->  qaylamerah.jpg
+Cokelat  ->  qaylacokelat.jpg
+Maroon  ->  qaylamaroon.jpg
+Army  ->  qaylaarmy.jpg
+Abu Tua  ->  qaylaabutua.jpg
+Fuschia  ->  qaylafuschia.jpg
+
+=== SKU A14 — Diffa Ruched Keyhole Top ===
+Taro  ->  diffataro.jpg  <-- FOTO UTAMA
+Misty  ->  diffamisty.jpg
+Soft Brown  ->  diffabrown.jpg
+Dusty Pink  ->  diffapink.jpg
+Misty Blue  ->  diffamistyblue.jpg
+Moss Green  ->  diffamoss.jpg
+
+=== SKU 7018 — Cleo Kerah V Knit Top ===
+Hitam  ->  cleohitam.jpg  <-- FOTO UTAMA
+Cokelat  ->  cleocokelat.jpg
+Abu  ->  cleoabu.jpg
+Khaki  ->  cleokhaki.jpg
+Salem  ->  cleosalem.jpg
+Maroon  ->  cleomaroon.jpg
+
+=== SKU A11 — Davina Off-Shoulder Top ===
+Taro  ->  davinataro.jpg  <-- FOTO UTAMA
+Dusty Pink  ->  davinapink.jpg
+Misty  ->  davinamisty.jpg
+Misty Blue  ->  davinamistyblue.jpg
+Moss Green  ->  davinamoss.jpg
+Soft Brown  ->  davinabrown.jpg
+
+=== SKU A42 — Luxe Kaos Kerah Knit ===
+Maroon  ->  luxemaroon.jpg  <-- FOTO UTAMA
+Putih  ->  luxeputih.jpg
+Hitam  ->  luxehitam.jpg
+Dark Choco  ->  luxechoco.jpg
+
+=== SKU A24 — Cecil Ribbon Off Shoulder ===
+Taro  ->  ceciltaro.jpg  <-- FOTO UTAMA
+Misty  ->  cecilmisty.jpg
+Moss Green  ->  cecilmoss.jpg
+Soft Brown  ->  cecilbrown.jpg
+Dusty Pink  ->  cecilpink.jpg
+Misty Blue  ->  cecilmistyblue.jpg
+
+=== SKU A036 — Liora Ruched Button Top ===
+Hitam  ->  liorahitam.jpg  <-- FOTO UTAMA
+Dark Choco  ->  liorachoco.jpg
+Moss Green  ->  lioramoss.jpg
+Putih  ->  lioraputih.jpg
+Misty  ->  lioramisty.jpg
+Misty Blue  ->  lioramistyblue.jpg
+Maroon  ->  lioramaroon.jpg
+Taro  ->  liorataro.jpg
+Dusty Pink  ->  liorapink.jpg
+Soft Brown  ->  liorabrown.jpg
+
+=== SKU A38 — Molly Cardigan Knit V-Neck ===
+Putih  ->  mollyputih.jpg  <-- FOTO UTAMA
+Deep Wine Red  ->  mollywine.jpg
+Hitam  ->  mollyhitam.jpg
+Dark Choco  ->  mollychoco.jpg
+
+=== SKU A28 — Tiara Polos Knit Top ===
+Soft Brown  ->  tiarabrown.jpg  <-- FOTO UTAMA
+Moss Green  ->  tiaramoss.jpg
+Taro  ->  tiarataro.jpg
+Misty  ->  tiaramisty.jpg
+Hitam  ->  tiarahitam.jpg
+Dusty Pink  ->  tiarapink.jpg
+Maroon  ->  tiaramaroon.jpg
+Dark Choco  ->  tiarachoco.jpg
+Putih  ->  tiaraputih.jpg
+Misty Blue  ->  tiaramistyblue.jpg
+
+=== SKU A04 — Sofia Bow Top Y2K ===
+Misty  ->  sofiamisty.jpg  <-- FOTO UTAMA
+Dusty Pink  ->  sofiapink.jpg
+Sky Blue  ->  sofiasky.jpg
+Soft Brown  ->  sofiabrown.jpg
+
+=== SKU A33 — Zaera Cardigan Knit ===
+Deep Wine Red  ->  zaerawine.jpg  <-- FOTO UTAMA
+Hitam  ->  zaerahitam.jpg
+Dark Choco  ->  zaerachoco.jpg
+Putih  ->  zaeraputih.jpg
+
+=== SKU 8011 — Veline Kaos New York 88 ===
+Maroon  ->  velinemaroon.jpg  <-- FOTO UTAMA
+Cokelat Tua  ->  velinecokelattua.jpg
+Khaki  ->  velinekhaki.jpg
+Abu-abu  ->  velineabu.jpg
+Salem  ->  velinesalem.jpg
+Hitam  ->  velinehitam.jpg
+
+=== SKU A19 — Cindy Draped One Shoulder ===
+Misty  ->  cindymisty.jpg  <-- FOTO UTAMA
+Soft Brown  ->  cindybrown.jpg
+Misty Blue  ->  cindymistyblue.jpg
+Baby Blue  ->  cindybabyblue.jpg
+Moss Green  ->  cindymoss.jpg
+Taro  ->  cindytaro.jpg
+Dusty Pink  ->  cindypink.jpg
+
+=== SKU A23 — Lily Cardigan Knit ===
+Deep Wine Red  ->  lilywine.jpg  <-- FOTO UTAMA
+Hitam  ->  lilyhitam.jpg
+Dark Choco  ->  lilychoco.jpg
+Putih  ->  lilyputih.jpg
+
+=== SKU A37 — Cavita Mock Neck Top ===
+Misty  ->  cavitamisty.jpg  <-- FOTO UTAMA
+Misty Blue  ->  cavitamistyblue.jpg
+Moss Green  ->  cavitamoss.jpg
+Soft Brown  ->  cavitabrown.jpg
+Taro  ->  cavitataro.jpg
+Dusty Pink  ->  cavitapink.jpg
+
+=== SKU 6052 — Kaluna Crop Top Cotton ===
+Plum  ->  kalunaplum.jpg  <-- FOTO UTAMA
+Putih  ->  kalunaputih.jpg
+Lime  ->  kalunalime.jpg
+Salem  ->  kalunasalem.jpg
+Lemon  ->  kalunalemon.jpg
+Cokelat  ->  kalunacokelat.jpg
+Navy  ->  kalunanavy.jpg
+Khaki  ->  kalunakhaki.jpg
+Merah  ->  kalunamerah.jpg
+Denim  ->  kalunadenim.jpg
+Taro  ->  kalunataro.jpg
+Maroon  ->  kalunamaroon.jpg
+Abu Tua  ->  kalunaabutua.jpg
+Hitam  ->  kalunahitam.jpg
+Fuschia  ->  kalunafuschia.jpg
+Army  ->  kalunaarmy.jpg
+Kubus  ->  kalunakubus.jpg
+
+=== SKU A07 — Sarah Bow Top Y2K ===
+Dusty Pink  ->  sarahpink.jpg  <-- FOTO UTAMA
+Sky Blue  ->  sarahsky.jpg
+Soft Brown  ->  sarahbrown.jpg
+Misty  ->  sarahmisty.jpg
+
+=== SKU A17 — Celia One Shoulder Crop ===
+Soft Brown  ->  celiabrown.jpg  <-- FOTO UTAMA
+Hitam  ->  celiahitam.jpg
+Taro  ->  celiataro.jpg
+Misty Blue  ->  celiamistyblue.jpg
+Moss Green  ->  celiamoss.jpg
+Putih  ->  celiaputih.jpg
+Dusty Pink  ->  celiapink.jpg
+Maroon  ->  celiamaroon.jpg
+Dark Choco  ->  celiachoco.jpg
+Misty  ->  celiamisty.jpg
+
+=== SKU A10 — Cutie 2in1 Cardigan Set ===
+Putih  ->  cutieputih.jpg  <-- FOTO UTAMA
+Dark Choco  ->  cutiechoco.jpg
+Hitam  ->  cutiehitam.jpg
+Deep Wine Red  ->  cutiewine.jpg
+
+=== SKU A035 — Aurora Peplum Cardigan ===
+Hitam  ->  aurorahitam.jpg  <-- FOTO UTAMA
+Dark Choco  ->  aurorachoco.jpg
+Putih  ->  auroraputih.jpg
+Deep Wine Red  ->  aurorawine.jpg
+
+=== SKU 7013 — Rachel Crop Top Serut ===
+Cokelat Tua  ->  rachelcokelattua.jpg  <-- FOTO UTAMA
+Khaki  ->  rachelkhaki.jpg
+Abu-abu  ->  rachelabu.jpg
+Salem  ->  rachelsalem.jpg
+Hitam  ->  rachelhitam.jpg
+Maroon  ->  rachelmaroon.jpg
+
+=== SKU A32 — Youra Kardigan Knit ===
+Dark Choco  ->  yourachoco.jpg  <-- FOTO UTAMA
+Putih  ->  youraputih.jpg
+Hitam  ->  yourahitam.jpg
+Deep Wine Red  ->  yourawine.jpg
+
+=== SKU 7015 — Nora Ruched Top ===
+Abu-abu  ->  noraabu.jpg  <-- FOTO UTAMA
+Cokelat  ->  noracokelat.jpg
+Hitam  ->  norahitam.jpg
+Salem  ->  norasalem.jpg
+Khaki  ->  norakhaki.jpg
+Maroon  ->  noramaroon.jpg
+
+=== SKU A08 — Queen Cardigan Knit ===
+Dark Choco  ->  queenchoco.jpg  <-- FOTO UTAMA
+Putih  ->  queenputih.jpg
+Deep Wine Red  ->  queenwine.jpg
+Hitam  ->  queenhitam.jpg
+
+=== SKU 8010 — Amora Kaos Brooklyn 99 ===
+Khaki  ->  amorakhaki.jpg  <-- FOTO UTAMA
+Hitam  ->  amorahitam.jpg
+Abu-abu  ->  amoraabu.jpg
+Salem  ->  amorasalem.jpg
+Maroon  ->  amoramaroon.jpg
+Cokelat Tua  ->  amoracokelattua.jpg
+
+=== SKU 7016 — Vanya Crop Top Square Neck ===
+Coksu  ->  vanyacoksu.jpg  <-- FOTO UTAMA
+Abu  ->  vanyaabu.jpg
+Hitam  ->  vanyahitam.jpg
+Maroon  ->  vanyamaroon.jpg
+Cokelat  ->  vanyacokelat.jpg
+Salem  ->  vanyasalem.jpg
+
+=== SKU A16 — Cynthia Asymmetrical Top ===
+Dusty Pink  ->  cynthiapink.jpg  <-- FOTO UTAMA
+Misty  ->  cynthiamisty.jpg
+Misty Blue  ->  cynthiamistyblue.jpg
+Moss Green  ->  cynthiamoss.jpg
+Soft Brown  ->  cynthiabrown.jpg
+Taro  ->  cynthiataro.jpg
+
+=== SKU A20 — Diana Folded Top ===
+Dusty Pink  ->  dianapink.jpg  <-- FOTO UTAMA
+Taro  ->  dianataro.jpg
+Misty Blue  ->  dianamistyblue.jpg
+Misty  ->  dianamisty.jpg
+Soft Brown  ->  dianabrown.jpg
+Moss Green  ->  dianamoss.jpg
+
+=== SKU A040 — Ayla Off-Shoulder Knit ===
+Dusty Pink  ->  aylapink.jpg  <-- FOTO UTAMA
+Misty  ->  aylamisty.jpg
+Soft Brown  ->  aylabrown.jpg
+Moss Green  ->  aylamoss.jpg
+Misty Blue  ->  aylamistyblue.jpg
+Taro  ->  aylataro.jpg
+
+=== SKU 6071 — Akira Crop Top Basic ===
+Putih  ->  akiraputih.jpg  <-- FOTO UTAMA
+Lemon  ->  akiralemon.jpg
+Fuschia  ->  akirafuschia.jpg
+Denim  ->  akiradenim.jpg
+Lime  ->  akiralime.jpg
+Navy  ->  akiranavy.jpg
+Maroon  ->  akiramaroon.jpg
+Army  ->  akiraarmy.jpg
+Salem  ->  akirasalem.jpg
+Cokelat  ->  akiracokelat.jpg
+Hitam  ->  akirahitam.jpg
+Merah  ->  akiramerah.jpg
+Khaki  ->  akirakhaki.jpg
+Kubus  ->  akirakubus.jpg
+
+=== SKU A27 — Clara Off-Shoulder Top ===
+Dusty Pink  ->  clarapink.jpg  <-- FOTO UTAMA
+Misty Blue  ->  claramistyblue.jpg
+Moss Green  ->  claramoss.jpg
+Taro  ->  clarataro.jpg
+Baby Blue  ->  clarababyblue.jpg
+Misty  ->  claramisty.jpg
+Soft Brown  ->  clarabrown.jpg
+
+=== SKU A18 — Cavia Cut Out Knit Top ===
+Misty Blue  ->  caviamistyblue.jpg  <-- FOTO UTAMA
+Misty  ->  caviamisty.jpg
+Soft Brown  ->  caviabrown.jpg
+Moss Green  ->  caviamoss.jpg
+Dusty Pink  ->  caviapink.jpg
+Taro  ->  caviataro.jpg
+
+=== SKU A05 — Sonya Bow Top Y2K ===
+Misty  ->  sonyamisty.jpg  <-- FOTO UTAMA
+Dusty Pink  ->  sonyapink.jpg
+Sky Blue  ->  sonyasky.jpg
+Soft Brown  ->  sonyabrown.jpg
+
+=== SKU A34 — Delia Asymmetrical Top ===
+Soft Brown  ->  deliabrown.jpg  <-- FOTO UTAMA
+Taro  ->  deliataro.jpg
+Moss Green  ->  deliamoss.jpg
+Dusty Pink  ->  deliapink.jpg
+Misty Blue  ->  deliamistyblue.jpg
+Misty  ->  deliamisty.jpg
+
+=== SKU 6058 — Richelle Crop Top Serut ===
+Abu Tua  ->  richelleabutua.jpg  <-- FOTO UTAMA
+Putih  ->  richelleputih.jpg
+Hitam  ->  richellehitam.jpg
+Cokelat  ->  richellecokelat.jpg
+Maroon  ->  richellemaroon.jpg
+Plum  ->  richelleplum.jpg
+Salem  ->  richellesalem.jpg
+Merah  ->  richellemerah.jpg
+Taro  ->  richelletaro.jpg
+Lime  ->  richellelime.jpg
+Fuschia  ->  richellefuschia.jpg
+Army  ->  richellearmy.jpg
+Navy  ->  richellenavy.jpg
+Kubus  ->  richellekubus.jpg
+Lemon  ->  richellelemon.jpg
