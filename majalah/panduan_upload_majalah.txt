@@ -1,0 +1,22 @@
+PANDUAN UPLOAD MAJALAH (PDF) — LUNELLY.ID
+==========================================
+
+FILE YANG DIPAKAI WEBSITE:
+magazine/edisi1.pdf
+magazine/edisi2.pdf
+magazine/edisi3.pdf
+magazine/edisi4.pdf
+magazine/edisi5.pdf
+
+ATURAN:
+1. Nama file harus PERSIS seperti di atas: semua huruf kecil, tanpa spasi, tanpa tanda hubung.
+2. Halaman PERTAMA pdf otomatis jadi cover yang tampil di website. Jadi pastikan halaman 1 adalah cover terbaik.
+3. Ukuran halaman A4 (potret). Usahakan ukuran file di bawah 15 MB supaya cepat dibuka pembeli
+   (kalau kebesaran, kecilkan dulu di ilovepdf.com -> Compress PDF).
+4. Upload lewat link repo yang sudah di-bookmark:
+   - Buka folder "magazine". Kalau foldernya belum ada: klik "Add file" -> "Upload files",
+     lalu di kolom nama ketik: magazine/edisi1.pdf (GitHub otomatis membuat foldernya).
+   - Tarik (drag) file pdf ke halaman itu, lalu klik tombol hijau "Commit changes".
+5. Edisi yang BELUM di-upload otomatis tampil sebagai kartu "Segera Terbit" — tidak perlu diapa-apakan.
+6. Mengganti edisi = upload ulang file dengan nama yang sama, otomatis menimpa yang lama.
+7. Setelah upload, cek di lunelly.id bagian "Lunelly Magazine" (refresh / incognito). Muncul 1-2 menit setelah upload.
