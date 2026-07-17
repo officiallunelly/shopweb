@@ -38,6 +38,21 @@ gtag('config', 'G-GMZR9WZDZ2');
 function ga(ev, params){ try{ gtag('event', ev, params||{}); }catch(e){} }
 </script>
 
+<!-- Meta Pixel — isi ID-nya nanti saat mulai Meta Ads.
+     Ganti PASTE_PIXEL_ID_DISINI dengan angka Pixel ID dari Events Manager, selesai. -->
+<script>
+var META_PIXEL_ID = 'PASTE_PIXEL_ID_DISINI';
+if(/^[0-9]{5,}$/.test(META_PIXEL_ID)){
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', META_PIXEL_ID); fbq('track','PageView');
+}
+function fbt(ev, params){ try{ if(window.fbq) fbq('track', ev, params||{}); }catch(e){} }
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -130,6 +145,7 @@ nav a:hover{color:var(--ink)}
 /* ---------- hero ---------- */
 .hero{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--parchment) 0%,var(--cream) 58%,var(--silk) 130%)}
 .hero-in{max-width:1200px;margin:0 auto;padding:64px 18px 56px;position:relative;z-index:2}
+@media(max-width:760px){.hero-in{padding:34px 18px 28px}.hero p{margin-top:12px}.hero-cta{margin-top:20px}.hero-badges{margin-top:20px}}
 .eyebrow{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--camel);margin-bottom:16px}
 h1{font-family:var(--font-d);font-weight:400;font-size:clamp(38px,7vw,72px);line-height:1.04;letter-spacing:-.01em;max-width:13ch}
 h1 em{font-style:italic;color:var(--pop)}
@@ -144,6 +160,24 @@ h1 em{font-style:italic;color:var(--pop)}
 .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 .badge{background:rgba(255,253,251,.75);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:600;color:var(--ink-soft);backdrop-filter:blur(4px)}
 .badge b{color:var(--ink)}
+
+/* ---------- bestseller strip ---------- */
+.bs-wrap{max-width:1200px;margin:18px auto 0;padding:0 18px}
+.bs-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px}
+.bs-head b{font-family:var(--font-d);font-style:italic;font-weight:500;font-size:clamp(17px,3vw,22px)}
+.bs-head a{font-size:12.5px;font-weight:700;color:var(--camel)}
+.bs{display:flex;gap:11px;overflow-x:auto;scrollbar-width:none;padding-bottom:6px;scroll-snap-type:x proximity}
+.bs::-webkit-scrollbar{display:none}
+.bsc{flex:0 0 auto;width:138px;scroll-snap-align:start;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;transition:transform .15s}
+.bsc:active{transform:scale(.97)}
+.bsc .im{position:relative;aspect-ratio:3/4}
+.bsc .im .init{font-size:30px}
+.bsc .dsc{position:absolute;top:7px;left:7px;background:var(--pop);color:#fff;font-size:10.5px;font-weight:800;border-radius:99px;padding:2px 7px}
+.bsc .bd{padding:8px 10px 10px}
+.bsc .nm{font-size:12px;font-weight:700;line-height:1.25;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.bsc .pr{font-size:13px;font-weight:800;margin-top:3px}
+.bsc .pr s{font-weight:500;font-size:10.5px;color:var(--ink-soft);margin-left:4px}
+.bsc .sd{font-size:10.5px;color:var(--pop);font-weight:700;margin-top:2px}
 
 /* ---------- bubble game ---------- */
 .game-wrap{max-width:1200px;margin:26px auto 0;padding:0 18px}
@@ -403,6 +437,7 @@ footer{margin-top:64px;background:var(--cream);border-top:1px solid var(--line)}
       <a class="btn btn-light" href="#main-gelembung">🫧 Main &amp; Dapat Voucher</a>
     </div>
     <div class="hero-badges">
+      <span class="badge">🏷️ Mulai <b>Rp38 ribuan</b></span>
       <span class="badge">🎁 <b>Gratis hadiah</b> tiap order</span>
       <span class="badge">💸 Diskon s.d. <b>77%</b></span>
       <span class="badge">📦 Kirim <b>seluruh Indonesia</b></span>
@@ -410,6 +445,11 @@ footer{margin-top:64px;background:var(--cream);border-top:1px solid var(--line)}
     </div>
   </div>
 </section>
+
+<div class="bs-wrap" aria-label="Paling laris">
+  <div class="bs-head"><b>Paling laris bulan ini 🔥</b><a href="#koleksi">Lihat semua →</a></div>
+  <div class="bs" id="bsStrip"></div>
+</div>
 
 <div class="game-wrap" id="main-gelembung">
   <div class="game" role="application" aria-label="Mini game: pecahkan gelembung diskon untuk membuka voucher">
@@ -669,7 +709,7 @@ function renderGrid(){
       <div class="card-body">
         <span class="card-cat">${p.cat}</span>
         <span class="card-name" onclick="openProduct('${p.sku}')">${p.name}</span>
-        <span class="card-colors">${p.colors.length} warna${p.sizes.length? ' · '+p.sizes.join('/') : ''}</span>
+        <span class="card-colors">${p.colors.length} warna${p.sizes.length? ' · '+p.sizes.join('/') : ''}${p.sold>=10?` · <b style='color:var(--pop)'>${p.sold>=1000?'1RB+':p.sold} terjual/bln</b>`:''}</span>
         <div class="price-row"><span class="now">${rp(p.now)}</span><span class="was">${rp(p.was)}</span></div>
         <button class="card-add" onclick="openProduct('${p.sku}')">Pilih Varian</button>
       </div>
@@ -685,6 +725,7 @@ function openProduct(sku){
   selP = PRODUCTS.find(p=>p.sku===sku);
   selColor=null; selSize=selP.sizes.length?null:''; selQty=1;
   ga('view_item',{currency:'IDR',value:selP.now,items:[{item_id:selP.sku,item_name:selP.name,price:selP.now}]});
+  fbt('ViewContent',{content_ids:[selP.sku],content_name:selP.name,content_type:'product',value:selP.now,currency:'IDR'});
   renderProdSheet();
   showSheet('prodSheet');
 }
@@ -732,6 +773,7 @@ function confirmAdd(){
   else cart.push({key, sku:selP.sku, name:selP.name, slug:selP.slug, color:selColor, size:selSize, now:selP.now, was:selP.was, qty:selQty});
   store('lunelly_cart', cart);
   ga('add_to_cart',{currency:'IDR',value:selP.now*selQty,items:[{item_id:selP.sku,item_name:selP.name,item_variant:selColor+(selSize?'/'+selSize:''),quantity:selQty,price:selP.now}]});
+  fbt('AddToCart',{content_ids:[selP.sku],content_name:selP.name,content_type:'product',value:selP.now*selQty,currency:'IDR'});
   updateFab();
   toast(`${selP.name} (${selColor}${selSize?', '+selSize:''}) masuk keranjang ✓`);
   closeSheets();
@@ -825,6 +867,7 @@ function applyVoucherCode(code, openCartAfter){
 function openCheckout(){
   if(!cart.length) return;
   ga('begin_checkout',{currency:'IDR',value:subtotal()-voucherCut(),items:cart.map(i=>({item_id:i.sku,item_name:i.name,item_variant:i.color+(i.size?'/'+i.size:''),quantity:i.qty,price:i.now}))});
+  fbt('InitiateCheckout',{content_ids:cart.map(i=>i.sku),num_items:cart.reduce((s,i)=>s+i.qty,0),value:subtotal()-voucherCut(),currency:'IDR'});
   renderCoTotals();
   showSheet('coSheet');
 }
@@ -904,6 +947,7 @@ function sendToWA(){
 
   ga('purchase_intent_whatsapp',{currency:'IDR',value:subtotal()-vc,coupon:voucher||undefined});
   ga('generate_lead',{lead_type:'checkout', value:subtotal()-vc, currency:'IDR'});
+  fbt('Lead',{value:subtotal()-vc,currency:'IDR'});
   window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(lines.join('\n')), '_blank');
   toast('Pesanan terkirim ke WhatsApp ✓');
 }
@@ -1022,6 +1066,20 @@ function claimGameVoucher(){
   if(cart.length) openCart();
   else document.getElementById('koleksi').scrollIntoView({behavior:'smooth'});
 }
+
+/* ========================= BESTSELLER STRIP ========================= */
+(function(){
+  const top = [...PRODUCTS].sort((a,b)=>b.sold-a.sold).slice(0,8);
+  $('bsStrip').innerHTML = top.map(p=>`
+    <div class="bsc" onclick="openProduct('${p.sku}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openProduct('${p.sku}')" aria-label="${p.name}">
+      <div class="im">${imgHTML(p, p.colors[0], '')}<span class="dsc">-${discPct(p)}%</span></div>
+      <div class="bd">
+        <div class="nm">${p.name}</div>
+        <div class="pr">${rp(p.now)}<s>${rp(p.was)}</s></div>
+        <div class="sd">🔥 ${p.sold>=1000?'1RB+':p.sold} terjual/bln</div>
+      </div>
+    </div>`).join('');
+})();
 
 /* ========================= HEADER / SCROLL HELPERS ========================= */
 function setHeadH(){ document.documentElement.style.setProperty('--headh', document.querySelector('header').offsetHeight+'px'); }
