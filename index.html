@@ -50,7 +50,18 @@ if(/^[0-9]{5,}$/.test(META_PIXEL_ID)){
   document,'script','https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', META_PIXEL_ID); fbq('track','PageView');
 }
-function fbt(ev, params){ try{ if(window.fbq) fbq('track', ev, params||{}); }catch(e){} }
+function fbEid(){ return 'lun-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,9); }
+function fbt(ev, params, eid){
+  eid = eid || fbEid();
+  try{ if(window.fbq) fbq('track', ev, params||{}, {eventID: eid}); }catch(e){}
+  return eid;
+}
+function fbc(ev, params, eid){
+  eid = eid || fbEid();
+  try{ if(window.fbq) fbq('trackCustom', ev, params||{}, {eventID: eid}); }catch(e){}
+  return eid;
+}
+function fbMatch(o){ try{ if(window.fbq) fbq('init', META_PIXEL_ID, o); }catch(e){} }
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1698485757906226&ev=PageView&noscript=1"
@@ -420,7 +431,7 @@ footer{margin-top:64px;background:var(--cream);border-top:1px solid var(--line)}
       <button class="head-ic" onclick="gotoSearch()" aria-label="Cari produk">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
       </button>
-      <a class="head-wa" href="https://wa.me/6282315409479?text=Halo%20Lunelly!%20Aku%20mau%20tanya-tanya%20dulu%20%F0%9F%92%8C" target="_blank" rel="noopener" onclick="ga('contact_whatsapp')">
+      <a class="head-wa" href="https://wa.me/6282315409479?text=Halo%20Lunelly!%20Aku%20mau%20tanya-tanya%20dulu%20%F0%9F%92%8C" target="_blank" rel="noopener" onclick="ga('contact_whatsapp');fbt('Contact',{content_name:'header_wa'})">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 .9c.3.2.5.2.6.4 0 .1 0 .7-.2 1.3z"/></svg>
         WhatsApp
       </a>
@@ -510,7 +521,7 @@ footer{margin-top:64px;background:var(--cream);border-top:1px solid var(--line)}
     <div class="eyebrow" style="color:var(--silk)">Reseller &amp; Grosir</div>
     <h2>Jualan bareng <em>Lunelly</em>, yuk.</h2>
     <p>Lunelly terbuka untuk reseller dan pembelian grosir dengan harga khusus. Produk fast-moving, foto katalog siap pakai, dan restock rutin — cocok untuk kamu yang mau mulai atau memperbesar toko online.</p>
-    <a class="btn" href="https://wa.me/6282315409479?text=Halo%20Lunelly!%20Aku%20tertarik%20jadi%20reseller%20%2F%20beli%20grosir.%20Boleh%20minta%20katalog%20dan%20pricelist-nya%3F" target="_blank" rel="noopener" onclick="ga('generate_lead',{lead_type:'reseller'})">Daftar via WhatsApp →</a>
+    <a class="btn" href="https://wa.me/6282315409479?text=Halo%20Lunelly!%20Aku%20tertarik%20jadi%20reseller%20%2F%20beli%20grosir.%20Boleh%20minta%20katalog%20dan%20pricelist-nya%3F" target="_blank" rel="noopener" onclick="ga('generate_lead',{lead_type:'reseller'});fbt('SubmitApplication',{content_name:'reseller_grosir'})">Daftar via WhatsApp →</a>
   </div>
 </section>
 
@@ -535,10 +546,10 @@ footer{margin-top:64px;background:var(--cream);border-top:1px solid var(--line)}
   <h2>Belanja di <em>marketplace</em></h2>
   <p class="sub">Lebih nyaman checkout di aplikasi favoritmu? Lunelly juga ada di sini:</p>
   <div class="market">
-    <a class="mk shopee" href="https://www.shopee.co.id/lunellystore" target="_blank" rel="noopener" onclick="ga('click_marketplace',{platform:'shopee'})">
+    <a class="mk shopee" href="https://www.shopee.co.id/lunellystore" target="_blank" rel="noopener" onclick="ga('click_marketplace',{platform:'shopee'});fbc('MarketplaceClick',{platform:'shopee'})">
       <span class="ic">S</span><span><b>Shopee — lunellystore</b><small>Star+ Seller · rating 4.9 · Gratis Hadiah</small></span><span class="go">→</span>
     </a>
-    <a class="mk tiktok" href="https://www.tiktok.com/@lunelly.store" target="_blank" rel="noopener" onclick="ga('click_marketplace',{platform:'tiktok'})">
+    <a class="mk tiktok" href="https://www.tiktok.com/@lunelly.store" target="_blank" rel="noopener" onclick="ga('click_marketplace',{platform:'tiktok'});fbc('MarketplaceClick',{platform:'tiktok'})">
       <span class="ic">♪</span><span><b>TikTok Shop — @lunelly.store</b><small>Live &amp; keranjang kuning tiap hari</small></span><span class="go">→</span>
     </a>
   </div>
@@ -726,7 +737,10 @@ function renderGrid(){
       </div>
     </article>`).join('');
 }
-$('q').addEventListener('input', e=>{ curQ=e.target.value.trim(); $('qClear').classList.toggle('show', !!curQ); renderGrid(); });
+let _fbSearchT;
+$('q').addEventListener('input', e=>{ curQ=e.target.value.trim(); $('qClear').classList.toggle('show', !!curQ); renderGrid();
+  clearTimeout(_fbSearchT); _fbSearchT = setTimeout(()=>{ if(curQ.length>2) fbt('Search',{search_string:curQ,content_type:'product'}); }, 1200);
+});
 $('sort').addEventListener('change', e=>{ curSort=e.target.value; renderGrid(); });
 
 /* ========================= PRODUCT SHEET ========================= */
@@ -736,7 +750,7 @@ function openProduct(sku){
   selP = PRODUCTS.find(p=>p.sku===sku);
   selColor=null; selSize=selP.sizes.length?null:''; selQty=1;
   ga('view_item',{currency:'IDR',value:selP.now,items:[{item_id:selP.sku,item_name:selP.name,price:selP.now}]});
-  fbt('ViewContent',{content_ids:[selP.sku],content_name:selP.name,content_type:'product',value:selP.now,currency:'IDR'});
+  fbt('ViewContent',{content_ids:[selP.sku],contents:[{id:selP.sku,quantity:1,item_price:selP.now}],content_name:selP.name,content_category:selP.cat||'',content_type:'product',value:selP.now,currency:'IDR'});
   renderProdSheet();
   showSheet('prodSheet');
 }
@@ -784,7 +798,7 @@ function confirmAdd(){
   else cart.push({key, sku:selP.sku, name:selP.name, slug:selP.slug, color:selColor, size:selSize, now:selP.now, was:selP.was, qty:selQty});
   store('lunelly_cart', cart);
   ga('add_to_cart',{currency:'IDR',value:selP.now*selQty,items:[{item_id:selP.sku,item_name:selP.name,item_variant:selColor+(selSize?'/'+selSize:''),quantity:selQty,price:selP.now}]});
-  fbt('AddToCart',{content_ids:[selP.sku],content_name:selP.name,content_type:'product',value:selP.now*selQty,currency:'IDR'});
+  fbt('AddToCart',{content_ids:[selP.sku],contents:[{id:selP.sku,quantity:selQty,item_price:selP.now}],content_name:selP.name,content_type:'product',value:selP.now*selQty,currency:'IDR'});
   updateFab();
   toast(`${selP.name} (${selColor}${selSize?', '+selSize:''}) masuk keranjang ✓`);
   closeSheets();
@@ -879,7 +893,7 @@ function applyVoucherCode(code, openCartAfter){
 function openCheckout(){
   if(!cart.length) return;
   ga('begin_checkout',{currency:'IDR',value:subtotal()-voucherCut(),items:cart.map(i=>({item_id:i.sku,item_name:i.name,item_variant:i.color+(i.size?'/'+i.size:''),quantity:i.qty,price:i.now}))});
-  fbt('InitiateCheckout',{content_ids:cart.map(i=>i.sku),num_items:cart.reduce((s,i)=>s+i.qty,0),value:subtotal()-voucherCut(),currency:'IDR'});
+  fbt('InitiateCheckout',{content_ids:cart.map(i=>i.sku),contents:cart.map(i=>({id:i.sku,quantity:i.qty,item_price:i.now})),content_type:'product',num_items:cart.reduce((s,i)=>s+i.qty,0),value:subtotal()-voucherCut(),currency:'IDR'});
   renderCoTotals();
   showSheet('coSheet');
 }
@@ -961,7 +975,13 @@ function sendToWA(){
 
   ga('purchase_intent_whatsapp',{currency:'IDR',value:subtotal()-vc,coupon:voucher||undefined});
   ga('generate_lead',{lead_type:'checkout', value:subtotal()-vc, currency:'IDR'});
-  fbt('Lead',{value:subtotal()-vc,currency:'IDR'});
+  try{
+    var _ph = wa.value.trim().replace(/\D/g,'').replace(/^0/,'62').replace(/^620/,'62');
+    fbMatch({ph:_ph, fn:(nama.value.trim().split(/\s+/)[0]||'').toLowerCase(), ct:(cityChosen||kota.value.trim()||'').toLowerCase().replace(/[^a-z]/g,''), country:'id'});
+  }catch(e){}
+  var ORDER_REF = fbt('Lead',{content_ids:cart.map(i=>i.sku),contents:cart.map(i=>({id:i.sku,quantity:i.qty,item_price:i.now})),content_type:'product',content_name:'checkout_whatsapp',num_items:cart.reduce((s,i)=>s+i.qty,0),value:subtotal()-vc,currency:'IDR'});
+  lines.push('');
+  lines.push('Ref: '+ORDER_REF);
   window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(lines.join('\n')), '_blank');
   toast('Pesanan terkirim ke WhatsApp ✓');
 }
