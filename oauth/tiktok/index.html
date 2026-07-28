@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>TikTok Authorization — Lunelly</title>
+<style>
+  :root{
+    --azure:#e8eef2;
+    --parchment:#f5f0e6;
+    --almond-cream:#ede2d1;
+    --almond-silk:#f9f4ec;
+    --camel:#b08d5e;
+    --camel-deep:#8a6a3c;
+    --ink:#2a2724;
+    --ink-soft:#5f584f;
+    --ink-faint:#8d8479;
+    --line:#ddd2c0;
+    --ok:#4a7357;
+    --ok-bg:#e8f0ea;
+    --bad:#9c4a2f;
+    --bad-bg:#f8e7e0;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;min-height:100vh;
+    background:linear-gradient(160deg,var(--azure) 0%,var(--parchment) 45%,var(--almond-cream) 100%);
+    color:var(--ink);
+    font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    display:flex;align-items:center;justify-content:center;
+    padding:32px 20px;line-height:1.6;
+  }
+  .card{
+    width:100%;max-width:600px;background:var(--almond-silk);
+    border:1px solid var(--line);border-radius:16px;
+    box-shadow:0 20px 50px -22px rgba(60,45,25,.35);
+    padding:40px 38px;
+  }
+  .brand{
+    font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--camel-deep);font-weight:700;margin:0 0 20px;
+  }
+  h1{font-size:25px;font-weight:600;margin:0 0 8px;letter-spacing:-.01em;line-height:1.25}
+  .lede{color:var(--ink-soft);font-size:15px;margin:0 0 28px}
+  .label{
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-faint);font-weight:700;margin:0 0 8px;
+  }
+  .codebox{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:16px 18px;margin:0 0 14px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:14px;line-height:1.5;word-break:break-all;color:var(--ink);
+    user-select:all;
+  }
+  button{
+    width:100%;background:var(--camel-deep);color:#fff;border:none;
+    border-radius:10px;padding:15px 20px;font-size:15px;font-weight:600;
+    font-family:inherit;letter-spacing:.02em;cursor:pointer;
+    transition:background .15s ease;
+  }
+  button:hover{background:var(--camel)}
+  button:active{transform:translateY(1px)}
+  .meta{margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
+  .row{display:flex;gap:14px;font-size:13px;padding:5px 0;color:var(--ink-soft)}
+  .row .k{flex:0 0 90px;color:var(--ink-faint);font-weight:600}
+  .row .v{
+    flex:1;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    word-break:break-all;font-size:12.5px;
+  }
+  .note{
+    margin-top:24px;padding:14px 16px;border-radius:10px;
+    background:var(--ok-bg);border-left:3px solid var(--ok);
+    font-size:13.5px;color:#33513c;
+  }
+  .note.warn{background:var(--bad-bg);border-left-color:var(--bad);color:#7a3a24}
+  .note strong{font-weight:700}
+  .idle{color:var(--ink-soft);font-size:14.5px}
+  .idle code{
+    background:var(--almond-cream);padding:2px 6px;border-radius:4px;
+    font-size:12.5px;word-break:break-all;
+  }
+  .hide{display:none}
+  @media (max-width:520px){
+    .card{padding:30px 22px}
+    h1{font-size:21px}
+    .row{flex-direction:column;gap:2px}
+    .row .k{flex:none}
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="brand">Lunelly &middot; Internal</p>
+
+  <!-- SUCCESS -->
+  <div id="ok" class="hide">
+    <h1>Authorization code received</h1>
+    <p class="lede">Copy this code and paste it into your session. It expires quickly, so use it now.</p>
+    <p class="label">Auth code</p>
+    <div class="codebox" id="code"></div>
+    <button onclick="cp()" id="btn">Copy code</button>
+    <div class="meta">
+      <div class="row"><span class="k">State</span><span class="v" id="state">—</span></div>
+      <div class="row"><span class="k">Received</span><span class="v" id="time">—</span></div>
+    </div>
+    <div class="note">
+      <strong>Next:</strong> this code is exchanged once for an access token. Nothing is stored on this page, and nothing is sent anywhere. Close the tab when you are done.
+    </div>
+  </div>
+
+  <!-- ERROR -->
+  <div id="err" class="hide">
+    <h1>Authorization failed</h1>
+    <p class="lede">TikTok returned an error instead of a code.</p>
+    <p class="label">Details</p>
+    <div class="codebox" id="errmsg"></div>
+    <div class="note warn">
+      Most common cause: the redirect URI registered in the TikTok app does not match this page exactly, including the trailing slash. It must be registered as <strong>https://lunelly.id/oauth/tiktok/</strong>
+    </div>
+  </div>
+
+  <!-- IDLE -->
+  <div id="idle">
+    <h1>TikTok callback endpoint</h1>
+    <p class="lede">This page is working. It is waiting for TikTok to send an authorization code.</p>
+    <p class="idle">
+      Nothing has been passed to it yet. Start the authorization flow from the TikTok for Business developer portal, and TikTok will return you here with the code attached to the URL.
+    </p>
+    <div class="note">
+      Register this exact address as the redirect URI, trailing slash included:<br>
+      <strong>https://lunelly.id/oauth/tiktok/</strong>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var q = new URLSearchParams(window.location.search);
+  var code  = q.get('auth_code') || q.get('code');
+  var error = q.get('error') || q.get('error_description') || q.get('message');
+
+  if (code) {
+    document.getElementById('idle').classList.add('hide');
+    document.getElementById('ok').classList.remove('hide');
+    document.getElementById('code').textContent = code;
+    document.getElementById('state').textContent = q.get('state') || 'not set';
+    var d = new Date();
+    document.getElementById('time').textContent =
+      d.toLocaleString('en-GB',{timeZone:'Asia/Jakarta',hour12:false}) + ' WIB';
+  } else if (error) {
+    document.getElementById('idle').classList.add('hide');
+    document.getElementById('err').classList.remove('hide');
+    var parts = [];
+    q.forEach(function(v,k){ parts.push(k + ' = ' + v); });
+    document.getElementById('errmsg').textContent = parts.join('\n') || error;
+  }
+})();
+
+function cp(){
+  var t = document.getElementById('code').textContent;
+  var b = document.getElementById('btn');
+  function done(){ b.textContent='Copied'; setTimeout(function(){b.textContent='Copy code';},1800); }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(t).then(done).catch(function(){fb(t,b,done)});
+  } else { fb(t,b,done); }
+}
+function fb(t,b,done){
+  var a=document.createElement('textarea');
+  a.value=t; a.style.position='fixed'; a.style.opacity='0';
+  document.body.appendChild(a); a.select();
+  try{ document.execCommand('copy'); done(); }
+  catch(e){ b.textContent='Select the code above manually'; }
+  document.body.removeChild(a);
+}
+</script>
+</body>
+</html>
