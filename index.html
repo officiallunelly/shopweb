@@ -554,7 +554,7 @@ footer{margin-top:64px;background:var(--cream);border-top:1px solid var(--line)}
 </div>
 
 <div class="music-hint" id="musicHint" role="dialog" aria-label="Tawaran musik latar">
-  <span>🎵 Belanja sambil dengar musik?</span>
+  <span>🎵 Belanja sambil dengar musik santai?</span>
   <button onclick="toggleMusic();hideMusicHint()">Nyalakan</button>
   <button class="x" onclick="hideMusicHint()" aria-label="Tutup">✕</button>
 </div>
@@ -1081,39 +1081,62 @@ var toggleMusic = function(){}, hideMusicHint = function(){};
   const btn = $('musicBtn');
   if(!btn || !window.AudioContext && !window.webkitAudioContext) { if(btn) btn.style.display='none'; return; }
 
-  let ac=null, master=null, jalan=false, timer=null, bar=0;
-  const BPM = 92, beat = 60/BPM;
+  let ac=null, master=null, gema=null, jalan=false, timer=null, bar=0;
+  const BPM = 68, beat = 60/BPM;   /* pelan & santai */
 
-  /* Tangga nada mayor lembut (C-D-E-G-A) — terdengar manis & tidak pernah sumbang */
-  const NADA = {C4:261.63,D4:293.66,E4:329.63,G4:392.00,A4:440.00,C5:523.25,D5:587.33,E5:659.25,G5:783.99,A5:880.00};
+  /* Tangga nada mayor lembut — terdengar manis, ceria, tidak pernah sumbang */
+  const NADA = {C4:261.63,D4:293.66,E4:329.63,F4:349.23,G4:392.00,A4:440.00,
+                C5:523.25,D5:587.33,E5:659.25,F5:698.46,G5:783.99,A5:880.00,C6:1046.50,E6:1318.51};
+  /* melodi 8 birama, gerak pelan & melompat manis — nada panjang, banyak ruang kosong */
   const MELODI = [
-    ['E5','G5','A5','G5','E5','D5','C5','D5'],
-    ['C5','E5','G5','E5','D5','C5','A4','C5'],
-    ['G4','C5','E5','D5','C5','A4','G4','A4'],
-    ['E5','D5','C5','A4','G4','A4','C5','E5']
+    [['E5',0,2],['G5',2,2],['A5',4,3.4]],
+    [['G5',0,1.6],['E5',1.6,1.6],['D5',3.2,2.6],['C5',5.4,2]],
+    [['C5',0,2],['E5',2,1.6],['G5',3.6,1.6],['A5',5.2,2.4]],
+    [['G5',0,2.4],['F5',2.4,1.6],['E5',4,3.4]],
+    [['A4',0,1.8],['C5',1.8,1.8],['E5',3.6,2],['D5',5.6,2]],
+    [['F5',0,2],['E5',2,1.6],['C5',3.6,3.6]],
+    [['D5',0,1.8],['E5',1.8,1.8],['G5',3.6,2],['E5',5.6,1.8]],
+    [['C5',0,2.4],['D5',2.4,1.6],['C5',4,4]]
   ];
-  const BASS = ['C4','A4','G4','C4'];
+  /* akor iringan — nada bareng, dibunyikan pelan sebagai bantalan hangat */
+  const AKOR = [
+    ['C4','E4','G4'], ['A4','C5','E5'], ['F4','A4','C5'], ['C4','E4','G4'],
+    ['A4','C5','E5'], ['F4','A4','C5'], ['G4','C5','E5'], ['C4','E4','G4']
+  ];
 
-  function nada(freq, mulai, panjang, gain, tipe){
+  function nada(freq, mulai, panjang, gain, tipe, keGema){
     const o = ac.createOscillator(), g = ac.createGain();
     o.type = tipe || 'sine';
     o.frequency.value = freq;
-    g.gain.setValueAtTime(0, mulai);
-    g.gain.linearRampToValueAtTime(gain, mulai + 0.02);
-    g.gain.exponentialRampToValueAtTime(0.0001, mulai + panjang);
+    g.gain.setValueAtTime(0.0001, mulai);
+    g.gain.linearRampToValueAtTime(gain, mulai + 0.10);           /* masuk halus */
+    g.gain.setValueAtTime(gain, mulai + panjang*0.55);
+    g.gain.exponentialRampToValueAtTime(0.0001, mulai + panjang); /* pudar pelan */
     o.connect(g); g.connect(master);
-    o.start(mulai); o.stop(mulai + panjang + 0.05);
+    if(keGema && gema) g.connect(gema);
+    o.start(mulai); o.stop(mulai + panjang + 0.08);
   }
   function mainkanBar(){
     if(!jalan) return;
-    const t0 = ac.currentTime + 0.06;
+    const t0 = ac.currentTime + 0.08;
     const baris = MELODI[bar % MELODI.length];
-    /* melodi */
-    baris.forEach((n,i)=> nada(NADA[n], t0 + i*beat/2, beat*0.62, 0.055, 'triangle'));
-    /* bass lembut */
-    nada(NADA[BASS[bar % BASS.length]]/2, t0, beat*3.4, 0.045, 'sine');
-    /* denyut halus tiap ketukan */
-    for(let i=0;i<4;i++) nada(NADA.C5*2, t0 + i*beat, 0.05, 0.012, 'sine');
+    const akor  = AKOR[bar % AKOR.length];
+
+    /* melodi utama — lembut, sedikit bergema */
+    baris.forEach(([n, mulai, panjang])=>
+      nada(NADA[n], t0 + mulai*beat/2, panjang*beat/2, 0.050, 'triangle', true));
+
+    /* bantalan akor hangat di belakang */
+    akor.forEach((n,i)=> nada(NADA[n]/2, t0 + i*0.05, beat*3.7, 0.026, 'sine'));
+
+    /* bass bulat */
+    nada(NADA[akor[0]]/4, t0, beat*3.8, 0.040, 'sine');
+
+    /* kerlip lonceng manis — cuma sesekali biar tidak ramai */
+    if(bar % 2 === 0){
+      nada(NADA.C6, t0 + beat*2, 0.9, 0.016, 'sine', true);
+      nada(NADA.E6, t0 + beat*2.5, 0.7, 0.011, 'sine', true);
+    }
     bar++;
     timer = setTimeout(mainkanBar, beat*4*1000);
   }
@@ -1122,13 +1145,24 @@ var toggleMusic = function(){}, hideMusicHint = function(){};
       ac = new (window.AudioContext || window.webkitAudioContext)();
       master = ac.createGain();
       master.gain.value = 0;
-      master.connect(ac.destination);
+      /* saringan agar nada tinggi tidak menusuk — terdengar empuk */
+      const lembut = ac.createBiquadFilter();
+      lembut.type = 'lowpass';
+      lembut.frequency.value = 2600;
+      /* gema tipis supaya terasa lapang & santai */
+      gema = ac.createDelay(1.0);
+      gema.delayTime.value = beat/2;
+      const gemaGain = ac.createGain();
+      gemaGain.gain.value = 0.24;
+      gema.connect(gemaGain); gemaGain.connect(gema); gemaGain.connect(lembut);
+      master.connect(lembut);
+      lembut.connect(ac.destination);
     }
     if(ac.state === 'suspended') ac.resume();
     jalan = true;
     master.gain.cancelScheduledValues(ac.currentTime);
     master.gain.setValueAtTime(master.gain.value, ac.currentTime);
-    master.gain.linearRampToValueAtTime(0.5, ac.currentTime + 1.2);  /* masuk pelan */
+    master.gain.linearRampToValueAtTime(0.55, ac.currentTime + 2.2);  /* masuk pelan sekali */
     mainkanBar();
     btn.classList.add('on');
     btn.setAttribute('aria-pressed','true');
@@ -1142,7 +1176,7 @@ var toggleMusic = function(){}, hideMusicHint = function(){};
     if(ac && master){
       master.gain.cancelScheduledValues(ac.currentTime);
       master.gain.setValueAtTime(master.gain.value, ac.currentTime);
-      master.gain.linearRampToValueAtTime(0.0001, ac.currentTime + 0.5); /* redup pelan */
+      master.gain.linearRampToValueAtTime(0.0001, ac.currentTime + 1.0); /* redup pelan */
     }
     btn.classList.remove('on');
     btn.setAttribute('aria-pressed','false');
