@@ -15,13 +15,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Lunelly">
 <meta property="og:title" content="Lunelly — Atasan Knit & Crop Top Wanita Korean Style">
-<meta property="og:description" content="Knitwear manis untuk setiap hari-harimu. Diskon hingga 77%, gratis hadiah untuk belanja Rp100.000+. Order via WhatsApp, bayar QRIS.">
+<meta property="og:description" content="Gaya yang sederhana, kesan yang istimewa. Knitwear premium, bow top Y2K, dan cardigan Korean style. Order via WhatsApp, bayar QRIS.">
 <meta property="og:url" content="https://lunelly.id/">
 <meta property="og:image" content="https://lunelly.id/og-cover.jpg">
 <meta property="og:locale" content="id_ID">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lunelly — Atasan Knit & Crop Top Wanita Korean Style">
-<meta name="twitter:description" content="Knitwear manis untuk hari-harimu. Diskon hingga 77%. Order via WhatsApp, bayar QRIS.">
+<meta name="twitter:description" content="Gaya yang sederhana, kesan yang istimewa. Knitwear premium & cardigan Korean style. Order via WhatsApp, bayar QRIS.">
 <meta name="facebook-domain-verification" content="26dp7eiv1oxbjuyiqii1g3kbjvu4yg" />
 <meta name="theme-color" content="#EEE4E1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23E6BEAE'/%3E%3Cpath d='M40 14a22 22 0 1 0 10 28A24 24 0 0 1 40 14z' fill='%23FFFDFB'/%3E%3C/svg%3E">
@@ -154,26 +154,60 @@ nav a:hover{color:var(--ink)}
 .head-wa:hover{background:#BBDAC3}
 .head-ic{width:38px;height:38px;border-radius:50%;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center;color:var(--ink-soft)}
 .head-ic:hover{color:var(--ink)}
+.head-ic.music.on{background:#FFD9EC;border-color:#F5A9CF;color:#C2477F}
+.music-eq{display:inline-flex;align-items:flex-end;gap:2px;height:13px}
+.music-eq i{width:2.5px;background:currentColor;border-radius:2px;height:4px}
+.head-ic.music.on .music-eq i{animation:eqbar .8s ease-in-out infinite}
+.head-ic.music.on .music-eq i:nth-child(2){animation-delay:.18s}
+.head-ic.music.on .music-eq i:nth-child(3){animation-delay:.36s}
+.head-ic.music.on .music-eq i:nth-child(4){animation-delay:.54s}
+@keyframes eqbar{0%,100%{height:4px}50%{height:13px}}
+@media(prefers-reduced-motion:reduce){.head-ic.music.on .music-eq i{animation:none;height:8px}}
+.music-hint{position:fixed;left:50%;transform:translateX(-50%);bottom:22px;z-index:80;background:rgba(255,255,255,.96);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:999px;padding:11px 16px;display:none;align-items:center;gap:11px;font-size:13px;font-weight:700;color:var(--ink)}
+.music-hint.show{display:flex}
+.music-hint button{background:#E86BA8;color:#fff;border-radius:999px;padding:7px 15px;font-weight:800;font-size:12.5px}
+.music-hint .x{background:none;color:var(--ink-soft);padding:6px 8px;font-size:15px}
 @media(max-width:760px){nav{display:none}.logo{font-size:24px}}
 
 /* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--parchment) 0%,var(--cream) 58%,var(--silk) 130%)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(168deg,#fffafd 0%,#ffe9f4 34%,#ffd6ea 72%,#f0dcff 130%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(circle,rgba(255,255,255,.9) 1.4px,transparent 1.6px),radial-gradient(circle,rgba(255,255,255,.7) 1.1px,transparent 1.3px);
+  background-size:54px 54px,32px 32px;background-position:0 0,18px 22px}
+.hero-bunting{position:absolute;top:0;left:0;width:100%;height:30px;z-index:3;pointer-events:none}
+.hero-star{position:absolute;z-index:2;pointer-events:none;font-size:18px;opacity:.75;animation:floaty 5s ease-in-out infinite}
+.hero-star:nth-of-type(2){animation-delay:-1.6s}
+.hero-star:nth-of-type(3){animation-delay:-3.2s}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-9px) rotate(4deg)}}
+.hero-shops{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.hero-shop{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.8);border:1px solid var(--line);border-radius:999px;padding:8px 15px 8px 9px;font-size:13px;font-weight:700;color:var(--ink);transition:.15s}
+.hero-shop:hover{box-shadow:var(--shadow);transform:translateY(-1px)}
+.hero-shop .ic{width:24px;height:24px;border-radius:8px;display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800;flex:0 0 auto}
+.hero-shop.shopee .ic{background:#ee4d2d}
+.hero-shop.tiktok .ic{background:#111}
+.hero-shop small{color:var(--ink-soft);font-weight:600}
+.hero-note{margin-top:14px;font-size:14px;font-weight:600;color:var(--ink);display:flex;flex-wrap:wrap;gap:8px 16px}
+.hero-note span{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:999px;padding:6px 14px}
 .hero-in{max-width:1200px;margin:0 auto;padding:64px 18px 56px;position:relative;z-index:2}
 @media(max-width:760px){.hero-in{padding:34px 18px 28px}.hero p{margin-top:12px}.hero-cta{margin-top:20px}.hero-badges{margin-top:20px}}
 .eyebrow{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--camel);margin-bottom:16px}
-h1{font-family:var(--font-d);font-weight:400;font-size:clamp(38px,7vw,72px);line-height:1.04;letter-spacing:-.01em;max-width:13ch}
-h1 em{font-style:italic;color:var(--pop)}
+h1{font-family:var(--font-d);font-weight:400;font-size:clamp(34px,6.2vw,64px);line-height:1.08;letter-spacing:-.005em;max-width:16ch}
+.hero h1{font-style:italic;font-weight:500}
+h1 em{font-style:italic;color:#E86BA8}
 .hero p{margin-top:18px;max-width:46ch;color:var(--ink-soft);font-size:clamp(15px,2.2vw,17px)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .15s ease,box-shadow .15s ease}
 .btn:active{transform:scale(.97)}
 .btn-dark{background:var(--ink);color:var(--parchment);box-shadow:var(--shadow)}
 .btn-light{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
-.hero-moon{position:absolute;right:-8%;top:-30%;width:min(62vw,640px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 34% 32%,#fff8f2 0%,var(--silk) 46%,var(--camel) 120%);opacity:.5;z-index:1;filter:blur(1px)}
-.hero-moon.m2{right:auto;left:-14%;top:auto;bottom:-58%;width:min(46vw,420px);background:radial-gradient(circle at 40% 35%,#ffffff, var(--mist) 60%, #cfe6e6 130%);opacity:.65}
+.hero-moon{position:absolute;right:-8%;top:-30%;width:min(62vw,640px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 34% 32%,#ffffff 0%,#ffd0e6 48%,#ff9ec7 120%);opacity:.5;z-index:1;filter:blur(1px)}
+.hero-moon.m2{right:auto;left:-14%;top:auto;bottom:-58%;width:min(46vw,420px);background:radial-gradient(circle at 40% 35%,#ffffff,#f3e6ff 58%,#c9a7f5 130%);opacity:.7}
 .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 .badge{background:rgba(255,253,251,.75);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:600;color:var(--ink-soft);backdrop-filter:blur(4px)}
 .badge b{color:var(--ink)}
+/* ---------- trust strip (badge yang dipindah dari hero) ---------- */
+.trust-strip{margin:26px auto 0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;border-top:1px solid var(--line);padding-top:22px}
+@media(max-width:760px){.trust-strip{margin-top:18px;padding-top:16px}}
 
 /* ---------- bestseller strip ---------- */
 .bs-wrap{max-width:1200px;margin:18px auto 0;padding:0 18px}
@@ -195,11 +229,18 @@ h1 em{font-style:italic;color:var(--pop)}
 
 /* ---------- bubble game ---------- */
 .game-wrap{max-width:1200px;margin:26px auto 0;padding:0 18px}
-.game{position:relative;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(135deg,var(--mist),#dff0ef 55%,var(--cream));border:1px solid var(--line);box-shadow:var(--shadow)}
-.game canvas{display:block;width:100%;height:clamp(190px,22vw,250px);touch-action:manipulation}
+.game{position:relative;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(180deg,#ffe3f1 0%,#fff2f8 48%,#f6ecff 100%);border:1px solid var(--line);box-shadow:var(--shadow)}
+.dress-bar{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.dress-bar button{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-weight:700;font-size:13px;color:var(--ink);transition:.15s}
+.dress-bar button:hover{box-shadow:var(--shadow);transform:translateY(-1px)}
+.dress-bar button.shop{background:#E86BA8;color:#fff;border-color:#E86BA8;margin-left:auto}
+@media(max-width:760px){.dress-bar button{flex:1 1 auto;padding:10px 12px;font-size:12.5px}.dress-bar button.shop{flex-basis:100%;margin-left:0}}
+.game canvas{display:block;width:100%;height:clamp(280px,30vw,340px);touch-action:manipulation}
 .game-hud{position:absolute;top:12px;left:14px;display:flex;gap:8px;align-items:center;pointer-events:none}
 .hud-chip{background:rgba(255,253,251,.88);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--ink)}
 .hud-chip small{font-weight:600;color:var(--ink-soft)}
+.game-note{position:absolute;bottom:12px;right:14px;pointer-events:none;font-size:12px;font-weight:700;color:var(--ink);background:rgba(255,255,255,.8);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+@media(max-width:760px){.game-note{display:none}}
 .game-title{position:absolute;bottom:12px;left:14px;pointer-events:none;font-family:var(--font-d);font-style:italic;font-size:clamp(15px,2.4vw,20px);color:var(--ink);opacity:.85}
 .game-reward{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:rgba(255,253,251,.9);backdrop-filter:blur(6px);flex-direction:column;gap:10px;text-align:center;padding:18px;z-index:3}
 .game-reward.show{display:flex;animation:popin .35s cubic-bezier(.34,1.56,.64,1)}
@@ -422,12 +463,15 @@ footer{margin-top:64px;background:var(--cream);border-top:1px solid var(--line)}
     <a class="logo" href="#" aria-label="Lunelly — beranda"><span class="moon"></span>Lunelly</a>
     <nav aria-label="Navigasi utama">
       <a href="#koleksi">Koleksi</a>
-      <a href="#main-gelembung">Main & Menang</a>
+      <a href="#main-dressup">Main & Menang</a>
       <a href="#reseller">Reseller</a>
       <a href="#cara">Cara Belanja</a>
       <a href="#majalah">Magazine</a>
     </nav>
     <div class="head-actions">
+      <button class="head-ic music" id="musicBtn" onclick="toggleMusic()" aria-label="Nyalakan musik latar" aria-pressed="false" title="Musik latar">
+        <span class="music-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      </button>
       <button class="head-ic" onclick="gotoSearch()" aria-label="Cari produk">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
       </button>
@@ -440,22 +484,43 @@ footer{margin-top:64px;background:var(--cream);border-top:1px solid var(--line)}
 </header>
 
 <section class="hero">
+  <svg class="hero-bunting" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 480 26">
+    <defs>
+      <pattern id="pitaY2K" width="48" height="26" patternUnits="userSpaceOnUse">
+        <path d="M0 5 Q12 12 24 5 Q36 12 48 5" fill="none" stroke="rgba(255,158,199,.75)" stroke-width="1.6"/>
+        <path d="M12 8 C9 4 4 6 5.5 10.5 C6.6 14 12 17.5 12 17.5 C12 17.5 17.4 14 18.5 10.5 C20 6 15 4 12 8 Z" fill="#FF9EC7"/>
+        <path d="M36 6.5 l1.9 3.9 4.3.6 -3.1 3 .7 4.3 -3.8-2 -3.8 2 .7-4.3 -3.1-3 4.3-.6 Z" fill="#D8B4FE"/>
+      </pattern>
+    </defs>
+    <rect width="480" height="26" fill="url(#pitaY2K)"/>
+  </svg>
   <div class="hero-moon" aria-hidden="true"></div>
   <div class="hero-moon m2" aria-hidden="true"></div>
+  <span class="hero-star" style="left:7%;top:36%">🎀</span>
+  <span class="hero-star" style="right:11%;top:60%">💗</span>
+  <span class="hero-star" style="left:47%;top:20%">✨</span>
   <div class="hero-in">
-    <div class="eyebrow">Lunelly Official · Knitwear &amp; Crop Top</div>
-    <h1>Knitwear manis untuk setiap <em>hari-harimu.</em></h1>
-    <p>Atasan knit premium, bow top Y2K, dan cardigan Korean style — lembut di kulit, manis di foto. Order langsung ke admin via WhatsApp, bayar pakai QRIS.</p>
+    <div class="eyebrow">Lunelly Official · Y2K Coquette &amp; Knitwear 🎀</div>
+    <h1>Gaya Yang Sederhana, <em>Kesan Yang Istimewa.</em></h1>
+    <p>Knitwear premium, bow top Y2K, dan cardigan Korean style dengan kualitas terbaik. Nyaman dipakai, mudah dipadukan, dan siap menemani aktivitasmu setiap hari.</p>
+    <div class="hero-note">
+      <span>💬 Order? Chat admin via WhatsApp ya.</span>
+      <span>💳 Pembayaran: QRIS.</span>
+    </div>
     <div class="hero-cta">
       <a class="btn btn-dark" href="#koleksi">Belanja Sekarang</a>
-      <a class="btn btn-light" href="#main-gelembung">🫧 Main &amp; Dapat Voucher</a>
+      <a class="btn btn-light" href="#main-dressup">🎀 Main Dress Up &amp; Menang Voucher</a>
+    </div>
+    <div class="hero-shops" aria-label="Belanja di marketplace">
+      <a class="hero-shop shopee" href="https://www.shopee.co.id/lunellystore" target="_blank" rel="noopener" onclick="ga('click_marketplace',{platform:'shopee'});fbc('MarketplaceClick',{platform:'shopee'})">
+        <span class="ic">S</span>Shopee <small>lunellystore</small>
+      </a>
+      <a class="hero-shop tiktok" href="https://www.tiktok.com/@lunelly.store" target="_blank" rel="noopener" onclick="ga('click_marketplace',{platform:'tiktok'});fbc('MarketplaceClick',{platform:'tiktok'})">
+        <span class="ic">♪</span>TikTok Shop <small>@lunelly.store</small>
+      </a>
     </div>
     <div class="hero-badges">
-      <span class="badge">🏷️ Mulai <b>Rp38 ribuan</b></span>
-      <span class="badge">🎁 <b>Gratis hadiah</b> belanja 100rb+</span>
-      <span class="badge">💸 Diskon s.d. <b>77%</b></span>
-      <span class="badge">📦 Kirim <b>seluruh Indonesia</b></span>
-      <span class="badge">⭐ <b>4.9</b> di Shopee</span>
+      <span class="badge">⭐ <b>4.9</b> di Shopee · <b>Star+ Seller</b></span>
     </div>
   </div>
 </section>
@@ -466,23 +531,37 @@ footer{margin-top:64px;background:var(--cream);border-top:1px solid var(--line)}
   <div class="bs" id="bsStrip"></div>
 </div>
 
-<div class="game-wrap" id="main-gelembung">
-  <div class="game" role="application" aria-label="Mini game: pecahkan gelembung diskon untuk membuka voucher">
-    <canvas id="bubbles"></canvas>
-    <div class="game-hud"><span class="hud-chip" id="popCount">0<small>/10 gelembung</small></span></div>
-    <div class="game-title">Pecahkan 10 gelembung, buka voucher rahasia ✨</div>
+<div class="game-wrap" id="main-dressup">
+  <div class="game" role="application" aria-label="Mini game dress up: padu padan outfit Lunelly untuk membuka voucher">
+    <canvas id="dressup"></canvas>
+    <div class="game-hud"><span class="hud-chip" id="lookCount">0<small>/6 gaya</small></span></div>
+    <div class="game-title" id="outfitName">Bow Top Y2K · Baby Pink</div>
+    <div class="game-note">Coba 6 gaya berbeda = voucher <b>Rp17.000</b> terbuka 🎀</div>
     <div class="game-reward" id="gameReward" aria-live="polite">
-      <h3>Yeay, voucher terbuka! 🎉</h3>
-      <div class="reward-code">POPLUNELLY</div>
-      <p>Potongan <b>Rp25.000</b> min. belanja Rp250.000 — otomatis terpasang di keranjangmu.</p>
+      <h3>Gemes banget! Voucher terbuka 🎀</h3>
+      <div class="reward-code">LUNAGEMES</div>
+      <p>Potongan <b>Rp17.000</b> min. belanja Rp170.000 — otomatis terpasang di keranjangmu.</p>
       <button class="btn btn-dark" onclick="claimGameVoucher()">Pakai Sekarang</button>
     </div>
   </div>
+  <div class="dress-bar">
+    <button onclick="dressNext('top')">👚 Ganti atasan</button>
+    <button onclick="dressNext('color')">🎨 Ganti warna</button>
+    <button onclick="dressNext('acc')">🎀 Aksesori</button>
+    <button onclick="dressRandom()">✨ Acak</button>
+    <button class="shop" onclick="document.getElementById('koleksi').scrollIntoView({behavior:'smooth'})">Cari yang mirip →</button>
+  </div>
+</div>
+
+<div class="music-hint" id="musicHint" role="dialog" aria-label="Tawaran musik latar">
+  <span>🎵 Belanja sambil dengar musik?</span>
+  <button onclick="toggleMusic();hideMusicHint()">Nyalakan</button>
+  <button class="x" onclick="hideMusicHint()" aria-label="Tutup">✕</button>
 </div>
 
 <div class="voucher-strip" aria-label="Voucher tersedia">
   <div class="vc"><span class="amt">Rp10rb</span><span class="det"><b>LUNELLY10</b>min. belanja Rp100.000</span><button onclick="applyVoucherCode('LUNELLY10',true)">Pakai</button></div>
-  <div class="vc"><span class="amt">Rp25rb</span><span class="det"><b>POPLUNELLY</b>🔒 buka lewat game gelembung</span><button onclick="document.getElementById('main-gelembung').scrollIntoView({behavior:'smooth'})">Main</button></div>
+  <div class="vc"><span class="amt">Rp17rb</span><span class="det"><b>LUNAGEMES</b>🔒 buka lewat game dress up</span><button onclick="document.getElementById('main-dressup').scrollIntoView({behavior:'smooth'})">Main</button></div>
   <div class="vc"><span class="amt">🚚</span><span class="det"><b>GRATIS ONGKIR</b>khusus Jabodetabek, otomatis saat checkout</span><button onclick="document.getElementById('koleksi').scrollIntoView({behavior:'smooth'})">Belanja</button></div>
   <div class="vc"><span class="amt">🎁</span><span class="det"><b>GRATIS HADIAH</b>otomatis, min. belanja Rp100.000</span><button onclick="document.getElementById('koleksi').scrollIntoView({behavior:'smooth'})">Belanja</button></div>
 </div>
@@ -514,6 +593,14 @@ footer{margin-top:64px;background:var(--cream);border-top:1px solid var(--line)}
     </div>
   </div>
   <div class="grid" id="grid"></div>
+
+  <div class="trust-strip" aria-label="Info belanja">
+    <span class="badge">🏷️ Mulai <b>Rp38 ribuan</b></span>
+    <span class="badge">🎁 <b>Gratis hadiah</b> belanja 100rb+</span>
+    <span class="badge">💸 Diskon s.d. <b>77%</b></span>
+    <span class="badge">📦 Kirim <b>seluruh Indonesia</b></span>
+    <span class="badge">🎀 <b>Y2K Coquette</b> &amp; Korean style</span>
+  </div>
 </main>
 
 <section class="band" id="reseller">
@@ -540,19 +627,6 @@ footer{margin-top:64px;background:var(--cream);border-top:1px solid var(--line)}
   <h2>Lunelly <em>Magazine</em></h2>
   <p class="sub">Lookbook &amp; katalog musiman Lunelly — gratis diunduh dalam format PDF.</p>
   <div class="mags" id="magShelf" aria-label="Majalah Lunelly"></div>
-</section>
-
-<section class="band">
-  <h2>Belanja di <em>marketplace</em></h2>
-  <p class="sub">Lebih nyaman checkout di aplikasi favoritmu? Lunelly juga ada di sini:</p>
-  <div class="market">
-    <a class="mk shopee" href="https://www.shopee.co.id/lunellystore" target="_blank" rel="noopener" onclick="ga('click_marketplace',{platform:'shopee'});fbc('MarketplaceClick',{platform:'shopee'})">
-      <span class="ic">S</span><span><b>Shopee — lunellystore</b><small>Star+ Seller · rating 4.9 · Gratis Hadiah</small></span><span class="go">→</span>
-    </a>
-    <a class="mk tiktok" href="https://www.tiktok.com/@lunelly.store" target="_blank" rel="noopener" onclick="ga('click_marketplace',{platform:'tiktok'});fbc('MarketplaceClick',{platform:'tiktok'})">
-      <span class="ic">♪</span><span><b>TikTok Shop — @lunelly.store</b><small>Live &amp; keranjang kuning tiap hari</small></span><span class="go">→</span>
-    </a>
-  </div>
 </section>
 
 <footer>
@@ -662,7 +736,7 @@ const giftRow = () => giftOK()
   : `<div class="row"><span>🎁 Gratis hadiah</span><span>tambah ${rp(GIFT_MIN - subtotal())} lagi</span></div>`;
 const VOUCHERS = {
   'LUNELLY10' : {amount:10000, min:100000, label:'Potongan Rp10.000 (min. Rp100.000)'},
-  'POPLUNELLY': {amount:25000, min:250000, label:'Potongan Rp25.000 (min. Rp250.000)', locked:true}
+  'LUNAGEMES': {amount:17000, min:170000, label:'Potongan Rp17.000 (min. Rp170.000)', locked:true}
 };
 let gameUnlocked = false;
 
@@ -688,7 +762,7 @@ function imgHTML(p, color, size){
 
 /* ========================= ANNOUNCE ========================= */
 (function(){
-  const items = '<span>🫧 Pop gelembungnya, menangkan voucher <b>Rp15.000</b></span><span>🎁 <b>Gratis hadiah</b> untuk belanja Rp100.000+</span><span>💳 Bayar mudah pakai <b>QRIS</b></span><span>🛍️ Juga tersedia di <b>Shopee</b> &amp; <b>TikTok Shop</b></span><span>🤝 Terbuka untuk <b>Reseller &amp; Grosir</b></span>';
+  const items = '<span>🎀 Main dress up, menangkan voucher <b>Rp17.000</b></span><span>🎁 <b>Gratis hadiah</b> untuk belanja Rp100.000+</span><span>💳 Bayar mudah pakai <b>QRIS</b></span><span>🛍️ Juga tersedia di <b>Shopee</b> &amp; <b>TikTok Shop</b></span><span>🤝 Terbuka untuk <b>Reseller &amp; Grosir</b></span>';
   $('announceTrack').innerHTML = items + items;
 })();
 
@@ -877,9 +951,9 @@ function applyVoucherCode(code, openCartAfter){
   const msg = $('vMsg');
   if(!v){ voucher=null; if(msg){msg.className='vmsg err';msg.textContent='Kode voucher tidak dikenal.'} if(!openCartAfter) return; }
   else if(v.locked && !gameUnlocked){
-    if(msg){msg.className='vmsg err';msg.textContent='Voucher ini terkunci — buka dulu lewat game gelembung di atas 🫧'}
-    toast('Voucher terkunci — mainkan game gelembung dulu 🫧');
-    if(openCartAfter){ closeSheets(); document.getElementById('main-gelembung').scrollIntoView({behavior:'smooth'}); return; }
+    if(msg){msg.className='vmsg err';msg.textContent='Voucher ini terkunci — buka dulu lewat game dress up di atas 🎀'}
+    toast('Voucher terkunci — mainkan dress up dulu 🎀');
+    if(openCartAfter){ closeSheets(); document.getElementById("main-dressup").scrollIntoView({behavior:'smooth'}); return; }
   } else {
     voucher = code;
     ga('select_promotion',{promotion_name:code});
@@ -999,104 +1073,387 @@ function closeSheets(keepScrim){
 }
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeSheets(); });
 
-/* ========================= BUBBLE GAME ========================= */
+/* ============ MUSIK LATAR — melodi asli, dibuat langsung di browser ============ */
+/* Tidak memakai lagu berhak cipta: nada disusun sendiri lewat Web Audio API,
+   jadi tidak ada file yang perlu diunduh dan tidak ada risiko klaim hak cipta. */
+var toggleMusic = function(){}, hideMusicHint = function(){};
 (function(){
-  const cv = $('bubbles');
+  const btn = $('musicBtn');
+  if(!btn || !window.AudioContext && !window.webkitAudioContext) { if(btn) btn.style.display='none'; return; }
+
+  let ac=null, master=null, jalan=false, timer=null, bar=0;
+  const BPM = 92, beat = 60/BPM;
+
+  /* Tangga nada mayor lembut (C-D-E-G-A) — terdengar manis & tidak pernah sumbang */
+  const NADA = {C4:261.63,D4:293.66,E4:329.63,G4:392.00,A4:440.00,C5:523.25,D5:587.33,E5:659.25,G5:783.99,A5:880.00};
+  const MELODI = [
+    ['E5','G5','A5','G5','E5','D5','C5','D5'],
+    ['C5','E5','G5','E5','D5','C5','A4','C5'],
+    ['G4','C5','E5','D5','C5','A4','G4','A4'],
+    ['E5','D5','C5','A4','G4','A4','C5','E5']
+  ];
+  const BASS = ['C4','A4','G4','C4'];
+
+  function nada(freq, mulai, panjang, gain, tipe){
+    const o = ac.createOscillator(), g = ac.createGain();
+    o.type = tipe || 'sine';
+    o.frequency.value = freq;
+    g.gain.setValueAtTime(0, mulai);
+    g.gain.linearRampToValueAtTime(gain, mulai + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, mulai + panjang);
+    o.connect(g); g.connect(master);
+    o.start(mulai); o.stop(mulai + panjang + 0.05);
+  }
+  function mainkanBar(){
+    if(!jalan) return;
+    const t0 = ac.currentTime + 0.06;
+    const baris = MELODI[bar % MELODI.length];
+    /* melodi */
+    baris.forEach((n,i)=> nada(NADA[n], t0 + i*beat/2, beat*0.62, 0.055, 'triangle'));
+    /* bass lembut */
+    nada(NADA[BASS[bar % BASS.length]]/2, t0, beat*3.4, 0.045, 'sine');
+    /* denyut halus tiap ketukan */
+    for(let i=0;i<4;i++) nada(NADA.C5*2, t0 + i*beat, 0.05, 0.012, 'sine');
+    bar++;
+    timer = setTimeout(mainkanBar, beat*4*1000);
+  }
+  function nyalakan(){
+    if(!ac){
+      ac = new (window.AudioContext || window.webkitAudioContext)();
+      master = ac.createGain();
+      master.gain.value = 0;
+      master.connect(ac.destination);
+    }
+    if(ac.state === 'suspended') ac.resume();
+    jalan = true;
+    master.gain.cancelScheduledValues(ac.currentTime);
+    master.gain.setValueAtTime(master.gain.value, ac.currentTime);
+    master.gain.linearRampToValueAtTime(0.5, ac.currentTime + 1.2);  /* masuk pelan */
+    mainkanBar();
+    btn.classList.add('on');
+    btn.setAttribute('aria-pressed','true');
+    btn.setAttribute('aria-label','Matikan musik latar');
+    try{ localStorage.setItem('lunellyMusic','1'); }catch(e){}
+    ga('music_on');
+  }
+  function matikan(){
+    jalan = false;
+    clearTimeout(timer);
+    if(ac && master){
+      master.gain.cancelScheduledValues(ac.currentTime);
+      master.gain.setValueAtTime(master.gain.value, ac.currentTime);
+      master.gain.linearRampToValueAtTime(0.0001, ac.currentTime + 0.5); /* redup pelan */
+    }
+    btn.classList.remove('on');
+    btn.setAttribute('aria-pressed','false');
+    btn.setAttribute('aria-label','Nyalakan musik latar');
+    try{ localStorage.setItem('lunellyMusic','0'); }catch(e){}
+    ga('music_off');
+  }
+  toggleMusic = function(){ jalan ? matikan() : nyalakan(); };
+
+  /* berhenti sendiri saat tab ditinggalkan */
+  document.addEventListener('visibilitychange', ()=>{
+    if(!ac) return;
+    if(document.hidden && jalan) ac.suspend();
+    else if(!document.hidden && jalan) ac.resume();
+  });
+
+  /* ---- ajakan kecil, sekali saja, setelah pengunjung mulai scroll ---- */
+  const hint = $('musicHint');
+  hideMusicHint = function(){
+    if(hint) hint.classList.remove('show');
+    try{ localStorage.setItem('lunellyMusicHint','1'); }catch(e){}
+  };
+  let sudah = false;
+  try{ sudah = localStorage.getItem('lunellyMusicHint') === '1'; }catch(e){}
+  let pilihanLama = null;
+  try{ pilihanLama = localStorage.getItem('lunellyMusic'); }catch(e){}
+
+  if(!sudah && hint && pilihanLama !== '0'){
+    const cek = ()=>{
+      if(window.scrollY > 600){
+        hint.classList.add('show');
+        setTimeout(()=>{ if(hint.classList.contains('show')) hideMusicHint(); }, 9000);
+        window.removeEventListener('scroll', cek);
+      }
+    };
+    window.addEventListener('scroll', cek, {passive:true});
+  }
+})();
+
+/* ============ GAME DRESS UP LUNELLY (Y2K pinky gemes) ============ */
+const TOPS = [
+  {n:'Bow Top Y2K', k:'bow'},
+  {n:'Off Shoulder', k:'off'},
+  {n:'Crop Top', k:'crop'},
+  {n:'Cardigan Knit', k:'cardi'},
+  {n:'Two Piece Set', k:'set'}
+];
+const WARNA = [
+  {n:'Baby Pink', c:'#FFB3D1', d:'#F27FB2'},
+  {n:'Misty Blue', c:'#BBD4EA', d:'#8FB4D8'},
+  {n:'Choco', c:'#C08E6E', d:'#9C6B4E'},
+  {n:'Maroon', c:'#A04559', d:'#7E3243'},
+  {n:'Salem', c:'#F3B7A3', d:'#DB9179'},
+  {n:'Lemon', c:'#F1E49B', d:'#D9C86C'},
+  {n:'Hitam', c:'#4E4741', d:'#2F2B28'}
+];
+const AKS = [
+  {n:'Pita rambut', e:'🎀'},
+  {n:'Kacamata', e:'🕶️'},
+  {n:'Tas mungil', e:'👜'},
+  {n:'Scarf knit', e:'🧣'},
+  {n:'Tanpa aksesori', e:''}
+];
+var dressNext = function(){}, dressRandom = function(){};
+
+(function(){
+  const cv = $('dressup');
+  if(!cv) return;
   const ctx = cv.getContext('2d');
-  const PAL = ['#E6BEAE','#E7D8C9','#ECF8F8','#B2967D','#EEE4E1'];
-  const LABELS = ['-50%','-60%','-70%','🎀','✿','🌙','-77%','Rp25rb'];
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let W,H,DPR, bubbles=[], parts=[], pops=0, done=false;
+  const TARGET = 6;
+  const KULIT = '#F6D3B8', RAMBUT = '#4B382F', PINK = '#FF9EC7', UNGU = '#D8B4FE';
+  const STIKER = ['🎀','💗','✨','⭐','🦋','🍒','💖','🌸'];
+  let W,H,DPR, t=0, iTop=0, iCol=0, iAks=0, done=false;
+  let dipakai = new Set(), parts=[], floats=[];
 
   function size(){
     DPR = Math.min(2, window.devicePixelRatio||1);
     W = cv.clientWidth; H = cv.clientHeight;
     cv.width = W*DPR; cv.height = H*DPR;
     ctx.setTransform(DPR,0,0,DPR,0,0);
+    floats = Array.from({length: Math.max(7, Math.floor(W/70))}, ()=>newFloat(true));
   }
-  function spawn(fromBottom){
-    const r = 16 + Math.random()*20;
-    return {
-      x: r + Math.random()*(W-2*r),
-      y: fromBottom ? H + r + Math.random()*80 : Math.random()*H,
-      r, vy: -(0.25 + Math.random()*0.45), wob: Math.random()*Math.PI*2,
-      ws: 0.01+Math.random()*0.02, wa: 6+Math.random()*12,
-      c: PAL[Math.floor(Math.random()*PAL.length)],
-      label: Math.random()<0.75 ? LABELS[Math.floor(Math.random()*LABELS.length)] : ''
-    };
+  function newFloat(acak){
+    return { x: 14+Math.random()*(W-28), y: acak ? Math.random()*H : H+24,
+             v: .18+Math.random()*.35, w: Math.random()*6.28, s: 13+Math.random()*10,
+             e: STIKER[Math.floor(Math.random()*STIKER.length)] };
   }
-  function reset(){
-    size();
-    bubbles = Array.from({length: Math.max(8, Math.floor(W/95))}, ()=>spawn(false));
+  function rr(x,y,w,h,r){
+    ctx.beginPath();
+    if(ctx.roundRect) ctx.roundRect(x,y,w,h,r);
+    else ctx.rect(x,y,w,h);
   }
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    for(const b of bubbles){
-      if(!reduced){ b.y += b.vy; b.wob += b.ws; }
-      const x = b.x + Math.sin(b.wob)*b.wa*0.3;
-      if(b.y < -b.r) Object.assign(b, spawn(true));
-      const g = ctx.createRadialGradient(x-b.r*0.35, b.y-b.r*0.4, b.r*0.1, x, b.y, b.r);
-      g.addColorStop(0,'rgba(255,255,255,.95)');
-      g.addColorStop(0.55, b.c+'E6');
-      g.addColorStop(1, b.c+'99');
-      ctx.beginPath(); ctx.arc(x,b.y,b.r,0,7); ctx.fillStyle=g; ctx.fill();
-      ctx.strokeStyle='rgba(255,255,255,.75)'; ctx.lineWidth=1.4; ctx.stroke();
-      ctx.beginPath(); ctx.arc(x-b.r*0.32, b.y-b.r*0.38, b.r*0.16, 0, 7); ctx.fillStyle='rgba(255,255,255,.85)'; ctx.fill();
-      if(b.label){
-        ctx.fillStyle='rgba(67,51,42,.78)';
-        ctx.font = `800 ${Math.max(10,b.r*0.52)}px 'Plus Jakarta Sans',sans-serif`;
-        ctx.textAlign='center'; ctx.textBaseline='middle';
-        ctx.fillText(b.label, x, b.y+1);
-      }
-      b._x = x;
+  function hud(){
+    const el = $('lookCount');
+    if(el) el.innerHTML = Math.min(dipakai.size,TARGET) + '<small>/' + TARGET + ' gaya</small>';
+    const nm = $('outfitName');
+    if(nm) nm.textContent = TOPS[iTop].n + ' · ' + WARNA[iCol].n;
+  }
+
+  /* ---------- latar ---------- */
+  function latar(){
+    const cx = W/2, cy = H*0.52;
+    const g = ctx.createRadialGradient(cx,cy,10,cx,cy,Math.max(W,H)*0.55);
+    g.addColorStop(0,'rgba(255,255,255,.85)');
+    g.addColorStop(1,'rgba(255,255,255,0)');
+    ctx.beginPath(); ctx.arc(cx,cy,Math.max(W,H)*0.5,0,7); ctx.fillStyle=g; ctx.fill();
+
+    /* papan catur Y2K di bawah */
+    const kot = 14, barisY = H-kot*2;
+    for(let r=0;r<2;r++) for(let i=0;i<Math.ceil(W/kot);i++){
+      if((i+r)%2) continue;
+      ctx.fillStyle = r%2 ? 'rgba(216,180,254,.35)' : 'rgba(255,158,199,.35)';
+      ctx.fillRect(i*kot, barisY+r*kot, kot, kot);
     }
+    /* stiker melayang */
+    for(const s of floats){
+      if(!reduced){ s.y -= s.v; s.w += .015; }
+      if(s.y < -26) Object.assign(s, newFloat(false));
+      ctx.font = s.s + 'px serif';
+      ctx.textAlign='center'; ctx.textBaseline='middle';
+      ctx.globalAlpha = .75;
+      ctx.fillText(s.e, s.x + Math.sin(s.w)*8, s.y);
+      ctx.globalAlpha = 1;
+    }
+  }
+
+  /* ---------- karakter ---------- */
+  function gambarCewek(){
+    const cx = Math.round(W/2);
+    const FH = 190;
+    const feet = Math.min(H-34, Math.round(H/2 + FH/2));
+    const headR = 27;
+    const headY = feet - 150;
+    const bahuY  = feet - 116;
+    const pinggY = feet - 76;
+    const rokY   = feet - 40;
+    const warna = WARNA[iCol], gaya = TOPS[iTop].k;
+    const goyang = reduced ? 0 : Math.sin(t/40)*2;
+
+    ctx.save();
+    ctx.translate(0, goyang);
+
+    /* bayangan */
+    ctx.beginPath(); ctx.ellipse(cx, feet+6, 34, 6, 0, 0, 7);
+    ctx.fillStyle='rgba(180,140,160,.22)'; ctx.fill();
+
+    /* rambut belakang */
+    ctx.beginPath(); ctx.ellipse(cx, headY+16, headR+13, headR+22, 0, 0, 7);
+    ctx.fillStyle=RAMBUT; ctx.fill();
+
+    /* kaki */
+    ctx.fillStyle=KULIT;
+    rr(cx-15, rokY-6, 11, feet-rokY+2, 5); ctx.fill();
+    rr(cx+4,  rokY-6, 11, feet-rokY+2, 5); ctx.fill();
+    /* sepatu */
+    ctx.fillStyle = '#fff';
+    rr(cx-17, feet-6, 15, 9, 4); ctx.fill();
+    rr(cx+2,  feet-6, 15, 9, 4); ctx.fill();
+    ctx.strokeStyle='rgba(67,51,42,.25)'; ctx.lineWidth=1;
+    rr(cx-17, feet-6, 15, 9, 4); ctx.stroke();
+    rr(cx+2,  feet-6, 15, 9, 4); ctx.stroke();
+
+    /* rok / bawahan */
+    ctx.beginPath();
+    ctx.moveTo(cx-21, pinggY);
+    ctx.lineTo(cx+21, pinggY);
+    ctx.lineTo(cx+31, rokY);
+    ctx.lineTo(cx-31, rokY);
+    ctx.closePath();
+    ctx.fillStyle = (gaya==='set') ? warna.d : '#A9B7C6';
+    ctx.fill();
+    ctx.strokeStyle='rgba(67,51,42,.18)'; ctx.lineWidth=1; ctx.stroke();
+
+    /* lengan */
+    ctx.fillStyle=KULIT;
+    rr(cx-31, bahuY+4, 10, 46, 5); ctx.fill();
+    rr(cx+21, bahuY+4, 10, 46, 5); ctx.fill();
+
+    /* badan (kulit) */
+    ctx.fillStyle=KULIT;
+    rr(cx-22, bahuY, 44, pinggY-bahuY+6, 12); ctx.fill();
+
+    /* ---- atasan ---- */
+    ctx.strokeStyle='rgba(67,51,42,.2)'; ctx.lineWidth=1;
+    if(gaya==='crop'){
+      ctx.fillStyle=warna.c; rr(cx-23, bahuY-2, 46, 30, 11); ctx.fill(); ctx.stroke();
+      ctx.fillStyle=warna.d; rr(cx-23, bahuY-2, 46, 7, 6); ctx.fill();
+    } else if(gaya==='bow'){
+      ctx.fillStyle=warna.c; rr(cx-23, bahuY-2, 46, pinggY-bahuY+6, 12); ctx.fill(); ctx.stroke();
+      /* pita di dada */
+      ctx.fillStyle=warna.d;
+      ctx.beginPath(); ctx.moveTo(cx,bahuY+16); ctx.lineTo(cx-13,bahuY+9); ctx.lineTo(cx-13,bahuY+23); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(cx,bahuY+16); ctx.lineTo(cx+13,bahuY+9); ctx.lineTo(cx+13,bahuY+23); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.arc(cx,bahuY+16,4.5,0,7); ctx.fillStyle='#fff'; ctx.fill();
+    } else if(gaya==='off'){
+      ctx.fillStyle=warna.c; rr(cx-23, bahuY+8, 46, pinggY-bahuY-2, 12); ctx.fill(); ctx.stroke();
+      ctx.fillStyle=warna.c;
+      ctx.beginPath(); ctx.arc(cx-26, bahuY+14, 9, 0, 7); ctx.fill();
+      ctx.beginPath(); ctx.arc(cx+26, bahuY+14, 9, 0, 7); ctx.fill();
+      ctx.fillStyle=warna.d; rr(cx-23, bahuY+8, 46, 6, 5); ctx.fill();
+    } else if(gaya==='cardi'){
+      ctx.fillStyle='#FFFDFB'; rr(cx-21, bahuY, 42, pinggY-bahuY+4, 11); ctx.fill(); ctx.stroke();
+      ctx.fillStyle=warna.c;
+      rr(cx-26, bahuY-2, 20, pinggY-bahuY+10, 9); ctx.fill(); ctx.stroke();
+      rr(cx+6,  bahuY-2, 20, pinggY-bahuY+10, 9); ctx.fill(); ctx.stroke();
+      rr(cx-32, bahuY+2, 11, 48, 5); ctx.fill();
+      rr(cx+21, bahuY+2, 11, 48, 5); ctx.fill();
+      ctx.fillStyle='#fff';
+      for(let i=0;i<3;i++){ ctx.beginPath(); ctx.arc(cx+8, bahuY+10+i*13, 2.2, 0, 7); ctx.fill(); }
+    } else { /* set */
+      ctx.fillStyle=warna.c; rr(cx-23, bahuY-2, 46, 32, 11); ctx.fill(); ctx.stroke();
+      ctx.fillStyle=warna.c;
+      rr(cx-32, bahuY+2, 11, 34, 5); ctx.fill();
+      rr(cx+21, bahuY+2, 11, 34, 5); ctx.fill();
+      ctx.fillStyle=warna.d; rr(cx-23, bahuY-2, 46, 7, 6); ctx.fill();
+    }
+
+    /* kepala */
+    ctx.beginPath(); ctx.arc(cx, headY, headR, 0, 7);
+    ctx.fillStyle=KULIT; ctx.fill();
+    /* poni */
+    ctx.beginPath();
+    ctx.arc(cx, headY-3, headR+1, Math.PI, 0);
+    ctx.fillStyle=RAMBUT; ctx.fill();
+    /* kuncir */
+    ctx.beginPath(); ctx.arc(cx-headR-6, headY+8, 10, 0, 7); ctx.fillStyle=RAMBUT; ctx.fill();
+    ctx.beginPath(); ctx.arc(cx+headR+6, headY+8, 10, 0, 7); ctx.fill();
+    /* mata */
+    ctx.fillStyle='#2E2622';
+    ctx.beginPath(); ctx.ellipse(cx-9, headY+4, 3.1, 4.2, 0, 0, 7); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(cx+9, headY+4, 3.1, 4.2, 0, 0, 7); ctx.fill();
+    ctx.fillStyle='#fff';
+    ctx.beginPath(); ctx.arc(cx-10, headY+2.5, 1.1, 0, 7); ctx.fill();
+    ctx.beginPath(); ctx.arc(cx+8, headY+2.5, 1.1, 0, 7); ctx.fill();
+    /* pipi */
+    ctx.fillStyle='rgba(255,140,180,.45)';
+    ctx.beginPath(); ctx.arc(cx-15, headY+10, 4.4, 0, 7); ctx.fill();
+    ctx.beginPath(); ctx.arc(cx+15, headY+10, 4.4, 0, 7); ctx.fill();
+    /* senyum */
+    ctx.strokeStyle='#8A5B4B'; ctx.lineWidth=1.6;
+    ctx.beginPath(); ctx.arc(cx, headY+9, 5, 0.25*Math.PI, 0.75*Math.PI); ctx.stroke();
+
+    /* aksesori */
+    const a = AKS[iAks];
+    if(a.e){
+      ctx.textAlign='center'; ctx.textBaseline='middle';
+      if(a.n==='Pita rambut'){ ctx.font='19px serif'; ctx.fillText('🎀', cx-headR+2, headY-headR+2); }
+      else if(a.n==='Kacamata'){ ctx.font='20px serif'; ctx.fillText('🕶️', cx, headY+4); }
+      else if(a.n==='Tas mungil'){ ctx.font='19px serif'; ctx.fillText('👜', cx+34, pinggY+4); }
+      else if(a.n==='Scarf knit'){ ctx.font='20px serif'; ctx.fillText('🧣', cx, bahuY-2); }
+    }
+    ctx.restore();
+  }
+
+  function draw(){
+    t++;
+    ctx.clearRect(0,0,W,H);
+    latar();
+    gambarCewek();
     for(let i=parts.length-1;i>=0;i--){
-      const p=parts[i];
-      p.x+=p.vx; p.y+=p.vy; p.vy+=0.06; p.life-=1;
-      ctx.globalAlpha = Math.max(0,p.life/28);
-      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,7); ctx.fillStyle=p.c; ctx.fill();
+      const s=parts[i];
+      s.x+=s.vx; s.y+=s.vy; s.vy+=.08; s.life-=1;
+      ctx.globalAlpha=Math.max(0,s.life/32);
+      ctx.fillStyle=s.c; ctx.fillRect(s.x,s.y,s.r,s.r*1.6);
       ctx.globalAlpha=1;
-      if(p.life<=0) parts.splice(i,1);
+      if(s.life<=0) parts.splice(i,1);
     }
     requestAnimationFrame(draw);
   }
-  function pop(px,py){
-    for(let i=0;i<bubbles.length;i++){
-      const b=bubbles[i];
-      const dx=px-(b._x||b.x), dy=py-b.y;
-      if(dx*dx+dy*dy <= (b.r+8)*(b.r+8)){
-        for(let k=0;k<10;k++){
-          const a=Math.random()*Math.PI*2, s=1+Math.random()*2.4;
-          parts.push({x:b._x,y:b.y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-0.5,r:2+Math.random()*3,c:b.c,life:28});
-        }
-        Object.assign(b, spawn(true));
-        pops++;
-        $('popCount').innerHTML = Math.min(pops,10)+'<small>/10 gelembung</small>';
-        ga('bubble_pop',{pops});
-        if(navigator.vibrate) navigator.vibrate(12);
-        if(pops>=10 && !done){
-          done=true; gameUnlocked=true;
-          $('gameReward').classList.add('show');
-          ga('unlock_achievement',{achievement_id:'POPLUNELLY'});
-        }
-        return;
-      }
+  function burst(x,y,n){
+    for(let k=0;k<n;k++){
+      const a=Math.random()*Math.PI*2, sp=1+Math.random()*2.6;
+      parts.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-1.2,r:2+Math.random()*3,
+                  c:[PINK,UNGU,'#FFFFFF'][Math.floor(Math.random()*3)],life:32});
     }
   }
-  function pt(e){
-    const r=cv.getBoundingClientRect();
-    const t=e.touches?e.touches[0]:e;
-    return [t.clientX-r.left, t.clientY-r.top];
+  function catat(){
+    dipakai.add(iTop + '-' + iCol);
+    hud();
+    burst(Math.round(W/2), Math.round(H*0.45), 8);
+    if(navigator.vibrate) navigator.vibrate(8);
+    ga('dressup_ganti',{look: TOPS[iTop].n + ' ' + WARNA[iCol].n, total: dipakai.size});
+    if(dipakai.size >= TARGET && !done){
+      done = true; gameUnlocked = true;
+      burst(Math.round(W/2), Math.round(H*0.4), 60);
+      $('gameReward').classList.add('show');
+      ga('unlock_achievement',{achievement_id:'LUNAGEMES'});
+    }
   }
-  cv.addEventListener('pointerdown', e=>{ const [x,y]=pt(e); pop(x,y); });
-  window.addEventListener('resize', reset);
-  reset(); draw();
+  dressNext = function(bagian){
+    if(bagian==='top') iTop = (iTop+1) % TOPS.length;
+    else if(bagian==='color') iCol = (iCol+1) % WARNA.length;
+    else { iAks = (iAks+1) % AKS.length; hud(); return; }
+    catat();
+  };
+  dressRandom = function(){
+    iTop = Math.floor(Math.random()*TOPS.length);
+    iCol = Math.floor(Math.random()*WARNA.length);
+    iAks = Math.floor(Math.random()*AKS.length);
+    catat();
+  };
+  cv.addEventListener('pointerdown', e=>{ e.preventDefault(); dressNext('top'); });
+  window.addEventListener('resize', size);
+  size(); dipakai.add('0-0'); hud(); draw();
 })();
 function claimGameVoucher(){
   $('gameReward').classList.remove('show');
-  applyVoucherCode('POPLUNELLY', false);
-  voucher = 'POPLUNELLY';
-  toast('Voucher POPLUNELLY siap dipakai di keranjang ✓');
+  applyVoucherCode('LUNAGEMES', false);
+  voucher = 'LUNAGEMES';
+  toast('Voucher LUNAGEMES siap dipakai di keranjang ✓');
   if(cart.length) openCart();
   else document.getElementById('koleksi').scrollIntoView({behavior:'smooth'});
 }
